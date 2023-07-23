@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1690133512
+Ball.gd::GDScript::-1::1690133508::0::1::::<>CharacterBody3D<>::
+Ball.tscn::PackedScene::5561457862303302576::1690133512::0::1::::<><>::res://Ball.gd
+export_presets.cfg::TextFile::-1::1690063949::0::1::::<><>::
+icon.svg::CompressedTexture2D::3005425853889442942::1690062888::1690062889::1::::<><>::
+World1.tscn::PackedScene::3147935787346921124::1690133512::0::1::::<><>::uid://cliansu2b06ho::::res://Ball.tscn
+::res://WebHTMLBuild/::1690064315
+index.apple-touch-icon.png::CompressedTexture2D::8704516478085553207::1690063949::1690064032::1::::<><>::
+index.icon.png::CompressedTexture2D::9068981048714841565::1690063949::1690064032::1::::<><>::
+index.png::CompressedTexture2D::759864856601867310::1690063949::1690064032::1::::<><>::
