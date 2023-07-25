@@ -1,3 +1,7 @@
-res://Ball.tscn
-res://World1.tscn
-res://Ball.gd
+res://GameObjects/Goal.tscn
+res://Levels/Level1.tscn
+res://Levels/ControlScene.tscn
+res://GameObjects/MeteoriteBall.tscn
+res://GameObjects/FollowCamera.tscn
+res://Scripts/MeteoriteBall.gd
+res://GameObjects/OrbitalFollowCamera.gd

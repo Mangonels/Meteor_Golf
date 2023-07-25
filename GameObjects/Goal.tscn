@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://n34k1oie6pb4"]
+
+[node name="Goal" type="Area3D"]

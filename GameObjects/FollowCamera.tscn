@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvf7qqu3pn52x"]
+
+[ext_resource type="Script" path="res://GameObjects/OrbitalFollowCamera.gd" id="1_biqnk"]
+
+[node name="OrbitalFollowCamera" type="Node3D"]
+script = ExtResource("1_biqnk")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+spring_length = 12.0
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]

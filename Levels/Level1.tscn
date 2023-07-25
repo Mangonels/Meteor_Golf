@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://bk35bpemgfmky"]
+
+[ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_e7uaf"]
+[ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="2_ria2r"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_d57dl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_scems"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_mveor"]
+
+[sub_resource type="Sky" id="Sky_ec30i"]
+sky_material = SubResource("PhysicalSkyMaterial_mveor")
+
+[sub_resource type="Environment" id="Environment_gtv8t"]
+background_mode = 2
+sky = SubResource("Sky_ec30i")
+
+[node name="World1" type="Node3D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_d57dl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_scems")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gtv8t")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.820541, -0.438425, 0.366736, 1.71467e-08, 0.64161, 0.767031, -0.571588, -0.62938, 0.526468, 0, 5.49829, 7.09766)
+shadow_enabled = true
+
+[node name="MeteoriteBall" parent="." node_paths=PackedStringArray("OrbitalFollowCamera") instance=ExtResource("1_e7uaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00768, 0)
+OrbitalFollowCamera = NodePath("../OrbitalFollowCamera")
+
+[node name="OrbitalFollowCamera" parent="." node_paths=PackedStringArray("CameraTarget") instance=ExtResource("2_ria2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+CameraTarget = NodePath("../MeteoriteBall")

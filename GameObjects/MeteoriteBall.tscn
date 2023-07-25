@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcymciac3bg8w"]
+
+[ext_resource type="Script" path="res://Scripts/MeteoriteBall.gd" id="1_1x3nm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_grkg8"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ut58o"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_nccs3"]
+
+[node name="MeteoriteBall" type="RigidBody3D"]
+script = ExtResource("1_1x3nm")
+
+[node name="DirectionalPivot" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DirectionalPivot"]
+transform = Transform3D(-1.47861e-07, 0, -0.0599968, 0, 0.0599968, 0, 3.38267, 0, -2.62254e-09, 0, 0, -2.43333)
+mesh = SubResource("BoxMesh_grkg8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_ut58o")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_nccs3")
