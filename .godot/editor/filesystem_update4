@@ -11,3 +11,5 @@ res://Scripts/GameManager.gd
 res://Scripts/MeteoriteBall.gd
 res://GameObjects/HUD.tscn
 res://Scripts/MainMenu.gd
+res://Scripts/DirectionalPivot.gd
+res://GameObjects/DirectionalPivot.tscn

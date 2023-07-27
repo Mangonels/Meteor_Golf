@@ -1,6 +1,9 @@
+Node3D
+CollisionShape3D
+MeshInstance3D
+StaticBody3D
 MarginContainer
 Label
-CollisionShape3D
 LinkButton
 VBoxContainer
 MenuButton
@@ -8,10 +11,7 @@ Button
 Control
 Camera3D
 SpringArm3D
-MeshInstance3D
 XRCamera3D
-Node3D
-StaticBody3D
 RigidBody3D
 Area3D
 DirectionalLight3D

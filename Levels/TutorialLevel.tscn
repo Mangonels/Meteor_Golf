@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://78h18nfrn17g"]
+[gd_scene load_steps=12 format=3 uid="uid://78h18nfrn17g"]
 
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_iy6p6"]
+[ext_resource type="PackedScene" uid="uid://daqu4qig86vf5" path="res://GameObjects/DirectionalPivot.tscn" id="2_1o5nh"]
 [ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="2_i0uub"]
 [ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://Levels/IngameMenu.tscn" id="3_esetd"]
 [ext_resource type="PackedScene" uid="uid://n34k1oie6pb4" path="res://GameObjects/Goal.tscn" id="3_f18f7"]
@@ -39,9 +40,10 @@ mesh = SubResource("BoxMesh_105sj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2"]
 shape = SubResource("BoxShape3D_ljggl")
 
-[node name="MeteoriteBall" parent="." node_paths=PackedStringArray("OrbitalFollowCamera") instance=ExtResource("1_iy6p6")]
+[node name="MeteoriteBall" parent="." instance=ExtResource("1_iy6p6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.916823, 0)
-OrbitalFollowCamera = NodePath("../OrbitalFollowCamera")
+
+[node name="DirectionalPivotBase" parent="." instance=ExtResource("2_1o5nh")]
 
 [node name="OrbitalFollowCamera" parent="." node_paths=PackedStringArray("CameraTarget") instance=ExtResource("2_i0uub")]
 CameraTarget = NodePath("../MeteoriteBall")

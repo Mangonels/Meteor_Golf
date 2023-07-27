@@ -1,13 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://bk35bpemgfmky"]
+[gd_scene load_steps=13 format=3 uid="uid://bk35bpemgfmky"]
 
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_e7uaf"]
+[ext_resource type="PackedScene" uid="uid://daqu4qig86vf5" path="res://GameObjects/DirectionalPivot.tscn" id="2_43rjw"]
 [ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="2_ria2r"]
 [ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://Levels/IngameMenu.tscn" id="3_vk57i"]
 [ext_resource type="PackedScene" uid="uid://bu2kie7r0xa63" path="res://GameObjects/HUD.tscn" id="4_8xbdw"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_d57dl"]
+[sub_resource type="BoxMesh" id="BoxMesh_y13vj"]
+size = Vector3(100, 1, 100)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_scems"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_f8t3d"]
+size = Vector3(100, 1, 100)
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_mveor"]
 
@@ -18,16 +21,21 @@ sky_material = SubResource("PhysicalSkyMaterial_mveor")
 background_mode = 2
 sky = SubResource("Sky_og7ek")
 
+[sub_resource type="BoxMesh" id="BoxMesh_iibxn"]
+size = Vector3(20, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aj4i1"]
+size = Vector3(20, 1, 1)
+
 [node name="Level" type="Node3D"]
 
-[node name="Floor" type="StaticBody3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
+[node name="Floor2" type="StaticBody3D" parent="."]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
-mesh = SubResource("BoxMesh_d57dl")
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor2"]
+mesh = SubResource("BoxMesh_y13vj")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
-shape = SubResource("BoxShape3D_scems")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2"]
+shape = SubResource("BoxShape3D_f8t3d")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_gtv8t")
@@ -36,9 +44,10 @@ environment = SubResource("Environment_gtv8t")
 transform = Transform3D(0.820541, -0.438425, 0.366736, 1.71467e-08, 0.64161, 0.767031, -0.571588, -0.62938, 0.526468, 0, 5.49829, 7.09766)
 shadow_enabled = true
 
-[node name="MeteoriteBall" parent="." node_paths=PackedStringArray("OrbitalFollowCamera") instance=ExtResource("1_e7uaf")]
+[node name="MeteoriteBall" parent="." instance=ExtResource("1_e7uaf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00768, 0)
-OrbitalFollowCamera = NodePath("../OrbitalFollowCamera")
+
+[node name="DirectionalPivotBase" parent="." instance=ExtResource("2_43rjw")]
 
 [node name="OrbitalFollowCamera" parent="." node_paths=PackedStringArray("CameraTarget") instance=ExtResource("2_ria2r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
@@ -47,3 +56,12 @@ CameraTarget = NodePath("../MeteoriteBall")
 [node name="IngameMenu" parent="." instance=ExtResource("3_vk57i")]
 
 [node name="HUD" parent="." instance=ExtResource("4_8xbdw")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.972262, -15.7854)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_iibxn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_aj4i1")

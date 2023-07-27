@@ -3,12 +3,15 @@ extends RigidBody3D
 @export var RotationSpeed = 2.0
 @export var NewStrokeBelowVelThreshold = 0.01
 
-@export var OrbitalFollowCamera: Node = null
+@onready var OrbitalFollowCamera: Node = get_tree().get_root().get_node("Level/OrbitalFollowCamera")
+@onready var DirectionalPivotBase: Node = get_tree().get_root().get_node("Level/DirectionalPivotBase")
+@onready var DirectionalPivotHeightRegulator: Node = get_tree().get_root().get_node("Level/DirectionalPivotBase/HeightRegulator")
 
 var Grounded = true
 var CanSwing = false
 
 func _ready():
+	#Contact checking for grounded detections setup:
 	set_contact_monitor(true)
 	set_max_contacts_reported(1)
 
@@ -16,13 +19,13 @@ func _process(delta):
 	#print("grounded: " + str(Grounded) + " canswing: " + str(CanSwing))
 	#print("angular vel: " + str(angular_velocity.length()) + " linear vel: " + str(linear_velocity.length()))
 	
-	$DirectionalPivot.rotation.y = OrbitalFollowCamera.rotation.y
+	DirectionalPivotBase.rotation.y = OrbitalFollowCamera.rotation.y
 	
 	if Input.is_action_pressed("move_up"):
-		$DirectionalPivot.rotate(Vector3.RIGHT, RotationSpeed * delta)
+		DirectionalPivotHeightRegulator.rotate(Vector3.RIGHT, RotationSpeed * delta)
 
 	if Input.is_action_pressed("move_down"):
-		$DirectionalPivot.rotate(Vector3.RIGHT, -RotationSpeed * delta)
+		DirectionalPivotHeightRegulator.rotate(Vector3.RIGHT, -RotationSpeed * delta)
 	
 	#The meteorite is considered grounded as long as anything is touching it
 	if get_contact_count() == 1:
@@ -46,4 +49,4 @@ func throw_golf_ball():
 
 # Function to get the forward vector of the DirectionPivot
 func get_forward_vector():
-	return -$DirectionalPivot.global_transform.basis.z
+	return -DirectionalPivotBase.global_transform.basis.z
