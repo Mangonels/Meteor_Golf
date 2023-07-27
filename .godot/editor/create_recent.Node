@@ -1,3 +1,8 @@
+LinkButton
+VBoxContainer
+MenuButton
+Button
+Control
 Camera3D
 SpringArm3D
 MeshInstance3D
@@ -8,8 +13,6 @@ StaticBody3D
 RigidBody3D
 Area3D
 Label
-Button
-Control
 DirectionalLight3D
 WorldEnvironment
 CSGBox3D

@@ -1,7 +1,14 @@
+res://Levels/BaseScene.tscn
+res://Scripts/BaseGUIScene.gd
 res://GameObjects/Goal.tscn
 res://Levels/Level1.tscn
-res://Levels/ControlScene.tscn
 res://GameObjects/MeteoriteBall.tscn
 res://GameObjects/FollowCamera.tscn
+res://Levels/TutorialLevel.tscn
 res://Scripts/MeteoriteBall.gd
-res://GameObjects/OrbitalFollowCamera.gd
+res://Scripts/GameManager.gd
+res://Scripts/MainMenu.gd
+res://Levels/MainMenu.tscn
+res://Scripts/IngameMenu.gd
+res://Levels/IngameMenu.tscn
+res://Scripts/Goal.gd

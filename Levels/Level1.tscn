@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bk35bpemgfmky"]
+[gd_scene load_steps=9 format=3 uid="uid://bk35bpemgfmky"]
 
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_e7uaf"]
 [ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="2_ria2r"]
+[ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://Levels/IngameMenu.tscn" id="3_vk57i"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_d57dl"]
 
@@ -9,12 +10,12 @@
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_mveor"]
 
-[sub_resource type="Sky" id="Sky_ec30i"]
+[sub_resource type="Sky" id="Sky_og7ek"]
 sky_material = SubResource("PhysicalSkyMaterial_mveor")
 
 [sub_resource type="Environment" id="Environment_gtv8t"]
 background_mode = 2
-sky = SubResource("Sky_ec30i")
+sky = SubResource("Sky_og7ek")
 
 [node name="World1" type="Node3D"]
 
@@ -41,3 +42,5 @@ OrbitalFollowCamera = NodePath("../OrbitalFollowCamera")
 [node name="OrbitalFollowCamera" parent="." node_paths=PackedStringArray("CameraTarget") instance=ExtResource("2_ria2r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 CameraTarget = NodePath("../MeteoriteBall")
+
+[node name="IngameMenu" parent="." instance=ExtResource("3_vk57i")]

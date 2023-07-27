@@ -9,6 +9,7 @@
 [sub_resource type="SphereMesh" id="SphereMesh_nccs3"]
 
 [node name="MeteoriteBall" type="RigidBody3D"]
+collision_layer = 2
 script = ExtResource("1_1x3nm")
 
 [node name="DirectionalPivot" type="Node3D" parent="."]
