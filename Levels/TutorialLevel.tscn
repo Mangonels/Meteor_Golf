@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://78h18nfrn17g"]
+[gd_scene load_steps=11 format=3 uid="uid://78h18nfrn17g"]
 
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_iy6p6"]
 [ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="2_i0uub"]
 [ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://Levels/IngameMenu.tscn" id="3_esetd"]
+[ext_resource type="PackedScene" uid="uid://n34k1oie6pb4" path="res://GameObjects/Goal.tscn" id="3_f18f7"]
+[ext_resource type="PackedScene" uid="uid://bu2kie7r0xa63" path="res://GameObjects/HUD.tscn" id="5_76ukj"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_105sj"]
 
@@ -17,7 +19,7 @@ sky_material = SubResource("PhysicalSkyMaterial_ca7yw")
 background_mode = 2
 sky = SubResource("Sky_ec30i")
 
-[node name="TutorialLevel" type="Node3D"]
+[node name="Level" type="Node3D"]
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)
@@ -51,4 +53,9 @@ environment = SubResource("Environment_l8lfy")
 transform = Transform3D(0.820541, -0.438425, 0.366736, 1.71467e-08, 0.64161, 0.767031, -0.571588, -0.62938, 0.526468, 0, 5.49829, 7.09766)
 shadow_enabled = true
 
+[node name="Goal" parent="." instance=ExtResource("3_f18f7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.884528, -5.42309)
+
 [node name="IngameMenu" parent="." instance=ExtResource("3_esetd")]
+
+[node name="HUD" parent="." instance=ExtResource("5_76ukj")]

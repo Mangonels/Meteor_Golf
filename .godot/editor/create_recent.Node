@@ -1,3 +1,6 @@
+MarginContainer
+Label
+CollisionShape3D
 LinkButton
 VBoxContainer
 MenuButton
@@ -8,11 +11,9 @@ SpringArm3D
 MeshInstance3D
 XRCamera3D
 Node3D
-CollisionShape3D
 StaticBody3D
 RigidBody3D
 Area3D
-Label
 DirectionalLight3D
 WorldEnvironment
 CSGBox3D

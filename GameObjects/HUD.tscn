@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bu2kie7r0xa63"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
+
+[node name="Strokes" type="Label" parent="."]
+layout_mode = 2
+offset_left = -168.0
+offset_top = 17.0
+offset_right = -41.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "Strokes: 0"
