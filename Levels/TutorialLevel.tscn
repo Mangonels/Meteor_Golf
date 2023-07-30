@@ -7,10 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://n34k1oie6pb4" path="res://GameObjects/Goal.tscn" id="3_f18f7"]
 [ext_resource type="PackedScene" uid="uid://bu2kie7r0xa63" path="res://GameObjects/HUD.tscn" id="5_76ukj"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_105sj"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ljggl"]
-
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_ca7yw"]
 
 [sub_resource type="Sky" id="Sky_ec30i"]
@@ -20,24 +16,39 @@ sky_material = SubResource("PhysicalSkyMaterial_ca7yw")
 background_mode = 2
 sky = SubResource("Sky_ec30i")
 
+[sub_resource type="BoxMesh" id="BoxMesh_105sj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ljggl"]
+
 [node name="Level" type="Node3D"]
 
-[node name="Floor" type="StaticBody3D" parent="."]
+[node name="Environment" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_l8lfy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(0.820541, -0.438426, 0.366737, 1.71467e-08, 0.64161, 0.767031, -0.571588, -0.62938, 0.526467, 0, 5.49829, 7.09766)
+shadow_enabled = true
+
+[node name="Layout" type="Node" parent="Environment"]
+
+[node name="Floor" type="StaticBody3D" parent="Environment/Layout"]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Layout/Floor"]
 mesh = SubResource("BoxMesh_105sj")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Layout/Floor"]
 shape = SubResource("BoxShape3D_ljggl")
 
-[node name="Floor2" type="StaticBody3D" parent="."]
+[node name="Floor2" type="StaticBody3D" parent="Environment/Layout"]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, -5.53199)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Layout/Floor2"]
 mesh = SubResource("BoxMesh_105sj")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Layout/Floor2"]
 shape = SubResource("BoxShape3D_ljggl")
 
 [node name="MeteoriteBall" parent="." instance=ExtResource("1_iy6p6")]
@@ -47,13 +58,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.916823, 0)
 
 [node name="OrbitalFollowCamera" parent="." node_paths=PackedStringArray("CameraTarget") instance=ExtResource("2_i0uub")]
 CameraTarget = NodePath("../MeteoriteBall")
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_l8lfy")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.820541, -0.438425, 0.366736, 1.71467e-08, 0.64161, 0.767031, -0.571588, -0.62938, 0.526468, 0, 5.49829, 7.09766)
-shadow_enabled = true
 
 [node name="Goal" parent="." instance=ExtResource("3_f18f7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.884528, -5.42309)

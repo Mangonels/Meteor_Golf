@@ -43,9 +43,21 @@ func _process(delta):
 
 # Function to throw the golf ball in the forward direction
 func throw_golf_ball():
-	var forwardVector = get_forward_vector()
-	var throwForce = 20.0
-	apply_central_impulse(forwardVector * throwForce)
+	var orientationRotation = DirectionalPivotBase.rotation.y
+	var heightRotation = DirectionalPivotHeightRegulator.rotation.x
+	var directionTransform = Transform3D(Basis(Vector3(0, 1, 0), orientationRotation) * Basis(Vector3(1, 0, 0), heightRotation))
+	
+
+	
+	var directionVector = -directionTransform.basis.z
+	
+	var impulseForce = 20.0
+	apply_central_impulse(directionVector * impulseForce)
+	
+
+
+
+
 
 # Function to get the forward vector of the DirectionPivot
 func get_forward_vector():

@@ -1,6 +1,7 @@
-Node3D
-CollisionShape3D
 MeshInstance3D
+CollisionShape3D
+Node
+Node3D
 StaticBody3D
 MarginContainer
 Label

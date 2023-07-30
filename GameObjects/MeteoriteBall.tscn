@@ -2,16 +2,16 @@
 
 [ext_resource type="Script" path="res://Scripts/MeteoriteBall.gd" id="1_1x3nm"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_ut58o"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_dvbns"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_nccs3"]
+[sub_resource type="BoxMesh" id="BoxMesh_ujydf"]
 
 [node name="MeteoriteBall" type="RigidBody3D"]
 collision_layer = 2
 script = ExtResource("1_1x3nm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_ut58o")
+shape = SubResource("BoxShape3D_dvbns")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_nccs3")
+mesh = SubResource("BoxMesh_ujydf")

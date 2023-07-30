@@ -1,0 +1,117 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.4.50",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Plane-col"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Plane",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2,
+                        "TANGENT" : 3
+                    },
+                    "indices" : 4
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 10404,
+            "max" : [
+                50.260074615478516,
+                40.27516174316406,
+                50.361087799072266
+            ],
+            "min" : [
+                -50.92378616333008,
+                -0.247717022895813,
+                -50.06831741333008
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 10404,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 10404,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 10404,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 15606,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 124848,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 83232,
+            "byteOffset" : 124848,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 124848,
+            "byteOffset" : 208080,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 166464,
+            "byteOffset" : 332928,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 31212,
+            "byteOffset" : 499392,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 530604,
+            "uri" : "lv1_terrain-b92563f9317bb0b5a74021102779c8a8.bin"
+        }
+    ]
+}
