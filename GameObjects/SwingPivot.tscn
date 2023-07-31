@@ -1,11 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://daqu4qig86vf5"]
 
-[ext_resource type="Script" path="res://Scripts/DirectionalPivot.gd" id="1_1d0du"]
+[ext_resource type="Script" path="res://Scripts/SwingDirectionPivot.gd" id="1_e1uht"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_grkg8"]
 
-[node name="DirectionalPivot" type="Node3D"]
-script = ExtResource("1_1d0du")
+[node name="SwingDirectionPivot" type="Node3D"]
+script = ExtResource("1_e1uht")
 
 [node name="HeightRegulator" type="Node3D" parent="."]
 

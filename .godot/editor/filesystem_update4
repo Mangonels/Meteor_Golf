@@ -8,5 +8,11 @@ res://Levels/IngameMenu.tscn
 res://GameObjects/HUD.tscn
 res://GameObjects/DirectionalPivot.tscn
 res://Scripts/MeteoriteBall.gd
+res://Scripts/GameManager.gd
 res://Scripts/OrbitalFollowCamera.gd
+res://GameObjects/DrivePowerDisplay.gd
+res://Scripts/DirectionalPivot.gd
+res://GameObjects/SwingPivot.tscn
+res://Scripts/SwingDirectionPivot.gd
+res://GameObjects/IngameMenu.tscn
 res://Scripts/IngameMenu.gd

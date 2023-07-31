@@ -44,3 +44,12 @@ func get_strokes():
 	
 func reset_game_status():
 	CurrentStrokes = 0
+
+#Used for meteorite respawn requests
+func respawn_meteorite(meteorite: RigidBody3D):
+	var foundSpawnPoint = get_tree().get_root().get_node("Level/SpawnPoint").global_transform.origin
+	#Stop it's momentum
+	meteorite.angular_velocity = Vector3.ZERO
+	meteorite.linear_velocity = Vector3.ZERO
+	#Reposition at spawn point
+	meteorite.global_transform.origin = foundSpawnPoint

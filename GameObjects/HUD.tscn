@@ -1,17 +1,88 @@
-[gd_scene format=3 uid="uid://bu2kie7r0xa63"]
+[gd_scene load_steps=2 format=3 uid="uid://bu2kie7r0xa63"]
+
+[ext_resource type="Script" path="res://GameObjects/DrivePowerDisplay.gd" id="1_4asul"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-grow_horizontal = 0
+anchors_preset = 0
 
 [node name="Strokes" type="Label" parent="."]
 layout_mode = 2
-offset_left = -168.0
-offset_top = 17.0
-offset_right = -41.0
-offset_bottom = 43.0
+offset_left = 925.0
+offset_top = 34.0
+offset_right = 1052.0
+offset_bottom = 60.0
 grow_horizontal = 0
-text = "Strokes: 0"
+text = "STROKES : 0"
+
+[node name="SwingAvailability" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 28.0
+offset_right = 199.0
+offset_bottom = 68.0
+color = Color(0.141176, 0.662745, 0.239216, 1)
+
+[node name="DrivePowerDisplay" type="Control" parent="." node_paths=PackedStringArray("PowerMeasure")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 568.0
+offset_top = 645.0
+offset_right = 568.0
+offset_bottom = 645.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_4asul")
+PowerMeasure = NodePath("PowerMeasure")
+
+[node name="BG" type="ColorRect" parent="DrivePowerDisplay"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -189.0
+offset_top = -128.0
+offset_right = 269.0
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.833736, 1.24)
+color = Color(0.894118, 0.890196, 0.92549, 1)
+
+[node name="Front" type="ColorRect" parent="DrivePowerDisplay"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -124.0
+offset_right = 278.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.790387, 1)
+color = Color(0.192157, 0.184314, 0.247059, 1)
+
+[node name="PowerMeasure" type="ColorRect" parent="DrivePowerDisplay"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -164.0
+offset_top = -124.0
+offset_right = 294.0
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(-0.0366527, 1)
+color = Color(0.87451, 0.878431, 0.87451, 1)

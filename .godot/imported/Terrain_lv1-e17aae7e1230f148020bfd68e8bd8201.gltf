@@ -22,14 +22,14 @@
             "mesh" : 1,
             "name" : "Cylinder",
             "scale" : [
-                2.568397045135498,
-                2.568397045135498,
-                2.568397045135498
+                4.215281009674072,
+                4.215281009674072,
+                4.215281009674072
             ],
             "translation" : [
                 -27.336437225341797,
-                21.232532501220703,
-                -23.97347068786621
+                13.170790672302246,
+                -22.758190155029297
             ]
         }
     ],
@@ -73,7 +73,7 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 10421,
+            "count" : 10398,
             "max" : [
                 50.260093688964844,
                 32.979129791259766,
@@ -89,53 +89,53 @@
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 10421,
+            "count" : 10398,
             "type" : "VEC2"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 10421,
+            "count" : 10398,
             "type" : "VEC3"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
-            "count" : 15663,
+            "count" : 15630,
             "type" : "SCALAR"
         },
         {
             "bufferView" : 4,
             "componentType" : 5126,
-            "count" : 69,
+            "count" : 78,
             "max" : [
-                -24.794164657592773,
-                12.987492561340332,
-                -21.509201049804688
+                -23.1640625,
+                13.028006553649902,
+                -18.71365737915039
             ],
             "min" : [
-                -29.878679275512695,
-                9.585383415222168,
-                -26.54193687438965
+                -31.508811950683594,
+                8.955509185791016,
+                -26.97347068786621
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 5,
             "componentType" : 5126,
-            "count" : 69,
+            "count" : 78,
             "type" : "VEC2"
         },
         {
             "bufferView" : 6,
             "componentType" : 5126,
-            "count" : 69,
+            "count" : 78,
             "type" : "VEC3"
         },
         {
             "bufferView" : 7,
             "componentType" : 5123,
-            "count" : 135,
+            "count" : 162,
             "type" : "SCALAR"
         },
         {
@@ -176,80 +176,80 @@
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 125052,
+            "byteLength" : 124776,
             "byteOffset" : 0,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 83368,
-            "byteOffset" : 125052,
+            "byteLength" : 83184,
+            "byteOffset" : 124776,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 125052,
-            "byteOffset" : 208420,
+            "byteLength" : 124776,
+            "byteOffset" : 207960,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 31326,
-            "byteOffset" : 333472,
+            "byteLength" : 31260,
+            "byteOffset" : 332736,
             "target" : 34963
         },
         {
             "buffer" : 0,
-            "byteLength" : 828,
-            "byteOffset" : 364800,
+            "byteLength" : 936,
+            "byteOffset" : 363996,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 552,
-            "byteOffset" : 365628,
+            "byteLength" : 624,
+            "byteOffset" : 364932,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 828,
-            "byteOffset" : 366180,
+            "byteLength" : 936,
+            "byteOffset" : 365556,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 270,
-            "byteOffset" : 367008,
+            "byteLength" : 324,
+            "byteOffset" : 366492,
             "target" : 34963
         },
         {
             "buffer" : 0,
             "byteLength" : 792,
-            "byteOffset" : 367280,
+            "byteOffset" : 366816,
             "target" : 34962
         },
         {
             "buffer" : 0,
             "byteLength" : 528,
-            "byteOffset" : 368072,
+            "byteOffset" : 367608,
             "target" : 34962
         },
         {
             "buffer" : 0,
             "byteLength" : 792,
-            "byteOffset" : 368600,
+            "byteOffset" : 368136,
             "target" : 34962
         },
         {
             "buffer" : 0,
             "byteLength" : 240,
-            "byteOffset" : 369392,
+            "byteOffset" : 368928,
             "target" : 34963
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 369632,
+            "byteLength" : 369168,
             "uri" : "Terrain_lv1-e17aae7e1230f148020bfd68e8bd8201.bin"
         }
     ]

@@ -1,7 +1,9 @@
+ColorRect
+Control
+Node3D
 CollisionShape3D
 MeshInstance3D
 Node
-Node3D
 StaticBody3D
 MarginContainer
 Label
@@ -9,7 +11,6 @@ LinkButton
 VBoxContainer
 MenuButton
 Button
-Control
 Camera3D
 SpringArm3D
 XRCamera3D

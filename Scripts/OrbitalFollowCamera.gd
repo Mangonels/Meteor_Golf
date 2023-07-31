@@ -18,7 +18,6 @@ func _ready():
 	$SpringArm3D.spring_length = CameraDistance
 
 func _input(event):
-	print(OrbitingEnabled)
 	if OrbitingEnabled and event is InputEventMouseMotion:
 		rotation.x -= deg_to_rad(event.relative.y) * OrbitalRotationSpeed
 		rotation.x = clamp(rotation.x, deg_to_rad(-90), deg_to_rad(90))
