@@ -10,13 +10,16 @@ extends Node3D
 @export var MaxOrbitDistance = 25.0
 @export var MinOrbitDistance = 3.5
 
+@export var OrbitingEnabled = true
+
 var CameraDistance = 12.0
 
 func _ready():
 	$SpringArm3D.spring_length = CameraDistance
 
 func _input(event):
-	if event is InputEventMouseMotion:
+	print(OrbitingEnabled)
+	if OrbitingEnabled and event is InputEventMouseMotion:
 		rotation.x -= deg_to_rad(event.relative.y) * OrbitalRotationSpeed
 		rotation.x = clamp(rotation.x, deg_to_rad(-90), deg_to_rad(90))
 		rotation.y -= deg_to_rad(event.relative.x) * OrbitalRotationSpeed
@@ -31,3 +34,9 @@ func _input(event):
 
 func _process(delta):
 	transform.origin = CameraTarget.transform.origin + OFCDisplacement
+	
+func disable_orbiting():
+	OrbitingEnabled = false
+	
+func enable_orbiting():
+	OrbitingEnabled = true

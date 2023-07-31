@@ -1,7 +1,7 @@
 extends RigidBody3D
 
 @export var RotationSpeed = 2.0
-@export var NewStrokeBelowVelThreshold = 0.01
+@export var NewStrokeBelowVelThreshold = 0.1
 
 @onready var OrbitalFollowCamera: Node = get_tree().get_root().get_node("Level/OrbitalFollowCamera")
 @onready var DirectionalPivotBase: Node = get_tree().get_root().get_node("Level/DirectionalPivotBase")
@@ -45,19 +45,12 @@ func _process(delta):
 func throw_golf_ball():
 	var orientationRotation = DirectionalPivotBase.rotation.y
 	var heightRotation = DirectionalPivotHeightRegulator.rotation.x
+	
 	var directionTransform = Transform3D(Basis(Vector3(0, 1, 0), orientationRotation) * Basis(Vector3(1, 0, 0), heightRotation))
-	
-
-	
 	var directionVector = -directionTransform.basis.z
 	
 	var impulseForce = 20.0
 	apply_central_impulse(directionVector * impulseForce)
-	
-
-
-
-
 
 # Function to get the forward vector of the DirectionPivot
 func get_forward_vector():

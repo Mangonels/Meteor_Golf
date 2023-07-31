@@ -1,0 +1,232 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.4.50",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Crater_base",
+            "scale" : [
+                0.8770548701286316,
+                0.30312952399253845,
+                0.8770548701286316
+            ],
+            "translation" : [
+                -5.098661422729492,
+                0,
+                6.442922592163086
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "Crater_base.003",
+            "rotation" : [
+                0.7072531580924988,
+                0.05930911749601364,
+                -0.34935498237609863,
+                0.6117405891418457
+            ],
+            "scale" : [
+                0.8770548701286316,
+                0.30312952399253845,
+                0.8770548701286316
+            ],
+            "translation" : [
+                0.840794563293457,
+                0.01924152858555317,
+                1.0359923839569092
+            ]
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cylinder",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2,
+                        "TANGENT" : 3
+                    },
+                    "indices" : 4
+                }
+            ]
+        },
+        {
+            "name" : "Cylinder.004",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 5,
+                        "TEXCOORD_0" : 6,
+                        "NORMAL" : 7,
+                        "TANGENT" : 8
+                    },
+                    "indices" : 9
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 70,
+            "max" : [
+                1.2915946245193481,
+                1,
+                1.193612813949585
+            ],
+            "min" : [
+                -1.291594386100769,
+                -0.9999999403953552,
+                -1.324810266494751
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 70,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 70,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 70,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 126,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 614,
+            "max" : [
+                2.2826435565948486,
+                1,
+                2.931347131729126
+            ],
+            "min" : [
+                -2.208235025405884,
+                -9.848304748535156,
+                -2.480412006378174
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 614,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5126,
+            "count" : 614,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 614,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5123,
+            "count" : 918,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 840,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 560,
+            "byteOffset" : 840,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 840,
+            "byteOffset" : 1400,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1120,
+            "byteOffset" : 2240,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 252,
+            "byteOffset" : 3360,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7368,
+            "byteOffset" : 3612,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4912,
+            "byteOffset" : 10980,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7368,
+            "byteOffset" : 15892,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 9824,
+            "byteOffset" : 23260,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1836,
+            "byteOffset" : 33084,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 34920,
+            "uri" : "Meteorite-94cbe20795b4a7166adcfd5f4e54a090.bin"
+        }
+    ]
+}

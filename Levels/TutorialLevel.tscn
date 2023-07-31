@@ -34,7 +34,7 @@ shadow_enabled = true
 [node name="Layout" type="Node" parent="Environment"]
 
 [node name="Floor" type="StaticBody3D" parent="Environment/Layout"]
-transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(11.4973, 0, 0, 0, 1, 0, 0, 0, 12.423, 0, 0, 10.7471)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Layout/Floor"]
 mesh = SubResource("BoxMesh_105sj")
@@ -43,7 +43,7 @@ mesh = SubResource("BoxMesh_105sj")
 shape = SubResource("BoxShape3D_ljggl")
 
 [node name="Floor2" type="StaticBody3D" parent="Environment/Layout"]
-transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, -5.53199)
+transform = Transform3D(14.0293, 0, 0, 0, 1, 0, 0, 0, 14.755, 0, 0, -11.4613)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Layout/Floor2"]
 mesh = SubResource("BoxMesh_105sj")
@@ -52,7 +52,7 @@ mesh = SubResource("BoxMesh_105sj")
 shape = SubResource("BoxShape3D_ljggl")
 
 [node name="MeteoriteBall" parent="." instance=ExtResource("1_iy6p6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.916823, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211893, 2.07343, 11.1236)
 
 [node name="DirectionalPivotBase" parent="." instance=ExtResource("2_1o5nh")]
 
@@ -60,7 +60,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.916823, 0)
 CameraTarget = NodePath("../MeteoriteBall")
 
 [node name="Goal" parent="." instance=ExtResource("3_f18f7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.884528, -5.42309)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.884528, -10.9418)
 
 [node name="IngameMenu" parent="." instance=ExtResource("3_esetd")]
 

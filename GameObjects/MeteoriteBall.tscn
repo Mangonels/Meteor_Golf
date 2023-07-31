@@ -1,17 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcymciac3bg8w"]
+[gd_scene load_steps=6 format=3 uid="uid://bcymciac3bg8w"]
 
 [ext_resource type="Script" path="res://Scripts/MeteoriteBall.gd" id="1_1x3nm"]
+[ext_resource type="ArrayMesh" uid="uid://c4kc2je4iuemc" path="res://BlenderMeshes/Meteorite.obj" id="2_n7x2d"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dvbns"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykbwr"]
+vertex_color_use_as_albedo = true
 
-[sub_resource type="BoxMesh" id="BoxMesh_ujydf"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jbnof"]
+height = 1.25608
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ri4rn"]
 
 [node name="MeteoriteBall" type="RigidBody3D"]
 collision_layer = 2
+angular_damp = 1.0
 script = ExtResource("1_1x3nm")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_dvbns")
+[node name="Meteorite" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.394398, 0.914152, 0.0936819, 0.442706, -0.0996786, -0.891109, -0.805271, 0.392925, -0.444013, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_ykbwr")
+mesh = ExtResource("2_n7x2d")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_ujydf")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.758543, 3.41384, 0.66616, 2.14115, 0.0701098, -2.78465, -2.68168, 1.02162, -2.03494, 0.0702209, 0.116529, -0.0184078)
+shape = SubResource("CapsuleShape3D_jbnof")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.64834, 0, 0, 0, 2.64834, 0, 0, 0, 2.64834, 0.995775, 0.627729, -0.001472)
+shape = SubResource("SphereShape3D_ri4rn")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.64834, 0, 0, 0, 2.64834, 0, 0, 0, 2.64834, 0.995775, 0.627729, -0.001472)
+shape = SubResource("SphereShape3D_ri4rn")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.56717, 0, 0, 0, 1.56717, 0, 0, 0, 1.56717, -1.33444, 1.07052, -0.411998)
+shape = SubResource("SphereShape3D_ri4rn")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.58579, 0, 0, 0, 2.58579, 0, 0, 0, 2.58579, 0.535799, -0.218089, -0.566539)
+shape = SubResource("SphereShape3D_ri4rn")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.59905, 0, 0, 0, 1.59905, 0, 0, 0, 1.59905, -0.248109, -0.678028, 1.1181)
+shape = SubResource("SphereShape3D_ri4rn")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.49741, 0, 0, 0, 1.49741, 0, 0, 0, 1.49741, 1.5119, -0.839748, 0.478439)
+shape = SubResource("SphereShape3D_ri4rn")

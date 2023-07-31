@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlsjnsdu66ela"]
+
+[ext_resource type="Script" path="res://Scripts/IngameMenu.gd" id="1_mucks"]
+
+[node name="IngameMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mucks")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = -33.0
+offset_right = 65.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Restart level" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Restart Level
+"
+
+[node name="Return to menu" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Return to menu"
+
+[connection signal="pressed" from="VBoxContainer/Restart level" to="." method="restart_level"]
+[connection signal="pressed" from="VBoxContainer/Return to menu" to="." method="return_to_main_menu"]
