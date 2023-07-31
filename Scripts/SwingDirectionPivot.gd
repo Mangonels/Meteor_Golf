@@ -4,6 +4,7 @@ extends Node3D
 
 @export var NewStrokeBelowVelThreshold = 0.5
 @export var MaxMeteorImpulsePotency = 20.0
+@export var SwingPowerMarkerSpeed = 2
 
 @onready var Meteorite: Node = get_tree().get_root().get_node("Level/MeteoriteBall")
 @onready var SwingAvailability: Node = get_tree().get_root().get_node("Level/HUD/SwingAvailability")
@@ -36,13 +37,13 @@ func _process(delta):
 		DrivePowerDisplay.show()
 
 	if SwingingUp:
-		SwingValue += delta
+		SwingValue += (delta * SwingPowerMarkerSpeed)
 		SwingValue = clamp(SwingValue, 0.0, 1.0)
 		DrivePowerDisplay.set_power_measure(SwingValue)
 		if SwingValue == 1.0:
 			SwingingUp = false
 	elif SwingValue > 0.0:
-		SwingValue -= delta
+		SwingValue -= (delta * SwingPowerMarkerSpeed)
 		SwingValue = clamp(SwingValue, 0.0, 1.0)
 		DrivePowerDisplay.set_power_measure(SwingValue)
 		if SwingValue == 0.0:
