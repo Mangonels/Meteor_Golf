@@ -16,7 +16,6 @@ var CurrentStrokes = 0
 #Changes the current level for a specific one by index in array above
 func change_to_level(index: int):
 	CurrentLevelIndex = index
-	print("changing to level: " + str(CurrentLevelIndex))
 	get_tree().change_scene_to_file(LevelPaths[index])
 	reset_game_status()
 
@@ -33,9 +32,8 @@ func add_stroke():
 	CurrentStrokes += 1
 	if StrokesDisplay != null:
 		StrokesDisplay.text = "Strokes: " + str(CurrentStrokes)
-	else: 
-		var node_path = "Level/HUD/Strokes"
-		StrokesDisplay = get_tree().get_root().get_node(node_path)
+	else:
+		StrokesDisplay = get_tree().get_root().get_node("Level/HUD/Strokes")
 		if StrokesDisplay:
 			StrokesDisplay.text = "Strokes: " + str(CurrentStrokes)
 

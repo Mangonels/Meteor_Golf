@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_e7uaf"]
 [ext_resource type="ArrayMesh" uid="uid://dkfvu4gfw0mrg" path="res://BlenderMeshes/Terrain_lv1.obj" id="1_u72ge"]
-[ext_resource type="PackedScene" uid="uid://daqu4qig86vf5" path="res://GameObjects/SwingPivot.tscn" id="2_43rjw"]
+[ext_resource type="PackedScene" uid="uid://daqu4qig86vf5" path="res://GameObjects/SwingDirectionPivot.tscn" id="2_43rjw"]
 [ext_resource type="ArrayMesh" uid="uid://dqjy3yw70rfq2" path="res://BlenderMeshes/FlagPole.obj" id="2_pcn7a"]
 [ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="2_ria2r"]
 [ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://GameObjects/IngameMenu.tscn" id="3_vk57i"]
@@ -87,7 +87,7 @@ CameraTarget = NodePath("../MeteoriteBall")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9817, 2.80543, 27.492)
 
 [node name="Goal" parent="." instance=ExtResource("5_w2dl2")]
-transform = Transform3D(1.38231, 0, 0, 0, 1.38231, 0, 0, 0, 1.38231, -26.2466, 5.5759, -22.9907)
+transform = Transform3D(1.38231, 0, 0, 0, 1.38231, 0, 0, 0, 1.38231, -26.3233, 3.85423, -21.8209)
 
 [node name="IngameMenu" parent="." instance=ExtResource("3_vk57i")]
 
