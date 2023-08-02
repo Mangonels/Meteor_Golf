@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bk35bpemgfmky"]
+[gd_scene load_steps=18 format=3 uid="uid://bk35bpemgfmky"]
 
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_e7uaf"]
 [ext_resource type="ArrayMesh" uid="uid://dkfvu4gfw0mrg" path="res://BlenderMeshes/Terrain_lv1.obj" id="1_u72ge"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://GameObjects/IngameMenu.tscn" id="3_vk57i"]
 [ext_resource type="PackedScene" uid="uid://bu2kie7r0xa63" path="res://GameObjects/HUD.tscn" id="4_8xbdw"]
 [ext_resource type="PackedScene" uid="uid://n34k1oie6pb4" path="res://GameObjects/Goal.tscn" id="5_w2dl2"]
+[ext_resource type="PackedScene" uid="uid://b7g23gyss1868" path="res://GameObjects/FinalResults.tscn" id="7_yy3nl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q0ifl"]
 sky_top_color = Color(0.243137, 0.4, 0.886275, 1)
@@ -89,6 +90,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.9817, 2.80543, 27.492)
 [node name="Goal" parent="." instance=ExtResource("5_w2dl2")]
 transform = Transform3D(1.38231, 0, 0, 0, 1.38231, 0, 0, 0, 1.38231, -26.3233, 3.85423, -21.8209)
 
-[node name="IngameMenu" parent="." instance=ExtResource("3_vk57i")]
+[node name="FinalResults" parent="." instance=ExtResource("7_yy3nl")]
 
 [node name="HUD" parent="." instance=ExtResource("4_8xbdw")]
+
+[node name="IngameMenu" parent="." instance=ExtResource("3_vk57i")]

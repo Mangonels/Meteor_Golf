@@ -2,6 +2,17 @@ extends Node
 
 #Global general purpose game managing class, mainly loads levels and controls game progression
 
+enum GolfScore 
+{
+	ALBATROSS,
+	EAGLE,
+	BIRDIE,
+	PAR,
+	BOGEY,
+	DOUBLEBOGEY,
+	TRIPLEBOGEY
+}
+
 var StrokesDisplay: Label = null
 
 #Defininition of all of the game levels by index in array
@@ -12,6 +23,8 @@ var LevelPaths = [
 				 ]
 var CurrentLevelIndex = 0
 var CurrentStrokes = 0
+var Casualties = 0
+var Destruction = 0
 
 #Changes the current level for a specific one by index in array above
 func change_to_level(index: int):
@@ -51,3 +64,8 @@ func respawn_meteorite(meteorite: RigidBody3D):
 	meteorite.linear_velocity = Vector3.ZERO
 	#Reposition at spawn point
 	meteorite.global_transform.origin = foundSpawnPoint
+	
+func show_level_results():
+	var FinalResults = get_tree().get_root().get_node("Level/FinalResults")
+	StrokesDisplay.hide()
+	FinalResults.display(0,0,GolfScore.PAR,0,0,0)

@@ -6,6 +6,7 @@ extends Node3D
 @export var NotableMeteorVelThreshold = 1
 @export var MaxMeteorImpulsePotency = 20.0
 @export var SwingPowerMarkerSpeed = 2
+@export var NotGroundedDownfallThreshold = 0.5
 
 @onready var Meteorite: Node = get_tree().get_root().get_node("Level/MeteoriteBall")
 @onready var OrbitalFollowCamera: Node = get_tree().get_root().get_node("Level/OrbitalFollowCamera")
@@ -43,7 +44,7 @@ func _process(delta):
 		SwingingUp = true
 		DrivePowerDisplay.show()
 	#Gameplay mechanic 2: Can apply downward force to meteorite?
-	elif !Meteorite.Grounded and SwingValue == 0.0 and Meteorite.linear_velocity.length() > NotableMeteorVelThreshold and Input.is_action_just_pressed("swing"):
+	elif Meteorite.TimeSinceLastGrounded > NotGroundedDownfallThreshold and SwingValue == 0.0 and Meteorite.linear_velocity.length() > NotableMeteorVelThreshold and Input.is_action_just_pressed("swing"):
 		Meteorite.do_downfall()
 
 	#SwingingUp increases SwingValue

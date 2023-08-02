@@ -31,6 +31,10 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "The friendly golfing game where nobody has to die"
+
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Start"

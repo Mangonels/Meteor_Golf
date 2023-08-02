@@ -6,7 +6,8 @@ extends RigidBody3D
 @onready var SwingDirectionPivotBase: Node = get_tree().get_root().get_node("Level/SwingDirectionPivot")
 @onready var DirectionalPivotHeightRegulator: Node = get_tree().get_root().get_node("Level/SwingDirectionPivot/HeightRegulator")
 
-var Grounded = true
+var TimeSinceLastGrounded = 0.0
+var Grounded = TimeSinceLastGrounded == 0.0
 
 func _ready():
 	#Contact checking for grounded detections setup:
@@ -19,8 +20,9 @@ func _process(delta):
 	
 	#The meteorite is considered grounded as long as anything is touching it
 	if get_contact_count() == 1:
-		Grounded = true
-	else: Grounded = false
+		TimeSinceLastGrounded = 0.0
+	else: 
+		TimeSinceLastGrounded += delta
 	
 	#Meteorite height offlimits respawn
 	if position.y < RespawnHeightThreshold:
