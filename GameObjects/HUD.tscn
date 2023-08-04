@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bu2kie7r0xa63"]
 
-[ext_resource type="Script" path="res://GameObjects/DrivePowerDisplay.gd" id="1_4asul"]
+[ext_resource type="Script" path="res://Scripts/DrivePowerDisplay.gd" id="1_yclxk"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -36,7 +36,7 @@ offset_right = 568.0
 offset_bottom = 645.0
 grow_horizontal = 2
 grow_vertical = 0
-script = ExtResource("1_4asul")
+script = ExtResource("1_yclxk")
 PowerMeasure = NodePath("PowerMeasure")
 
 [node name="BG" type="ColorRect" parent="DrivePowerDisplay"]

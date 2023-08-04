@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b7g23gyss1868"]
 
-[ext_resource type="Script" path="res://GameObjects/FinalResults.gd" id="1_bxhfh"]
+[ext_resource type="Script" path="res://Scripts/FinalResults.gd" id="1_x6jns"]
 
 [node name="FinalResults" type="Control" node_paths=PackedStringArray("ResultsDisplay")]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_bxhfh")
+script = ExtResource("1_x6jns")
 ResultsDisplay = NodePath("TextureRect/ResultsDisplay")
 
 [node name="TextureRect" type="TextureRect" parent="."]
