@@ -24,12 +24,14 @@ func _process(delta):
 	rotation.y = OrbitalFollowCamera.rotation.y
 	
 	#We can swing at the meteorite if it's Grounded and velocities are below NewStrokeBelowVelThreshold
-	if Meteorite.Grounded and Meteorite.angular_velocity.length() < NotableMeteorVelThreshold and Meteorite.linear_velocity.length() < NotableMeteorVelThreshold:
+	if Meteorite.is_grounded() and Meteorite.angular_velocity.length() < NotableMeteorVelThreshold and Meteorite.linear_velocity.length() < NotableMeteorVelThreshold:
 		CanSwing = true
 		SwingAvailability.show()
+		$HeightRegulator/Orienter.show()
 	else: 
 		CanSwing = false
 		SwingAvailability.hide()
+		$HeightRegulator/Orienter.hide()
 	
 	#Gameplay mechanic 1: Can apply horizontal force to meteorite?
 	if SwingValue > 0.0 and Input.is_action_just_pressed("swing"):

@@ -1,11 +1,1 @@
-res://GameObjects/Goal.tscn
-res://GameObjects/MeteoriteBall.tscn
-res://GameObjects/FollowCamera.tscn
-res://Levels/MainMenu.tscn
-res://GameObjects/HUD.tscn
-res://GameObjects/IngameMenu.tscn
-res://GameObjects/FinalResults.tscn
-res://GameObjects/SwingDirectionPivot.tscn
-res://GameObjects/Orienter.tscn
-res://Levels/TutorialLevel.tscn
-res://Levels/Level1.tscn
+res://GameObjects/CPU_Particles_LevelFinished.tscn

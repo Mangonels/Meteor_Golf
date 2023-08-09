@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=3 uid="uid://cb2r1p3ojpf4k"]
+
+[ext_resource type="Texture2D" uid="uid://t3on2f8h4x27" path="res://Sprites/ParticleSprite_Circle.png" id="1_xf2io"]
+[ext_resource type="Texture2D" uid="uid://cdllof7dbybru" path="res://Sprites/ParticleSprite_Ray.png" id="2_crmkq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7685"]
+transparency = 1
+blend_mode = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_xf2io")
+emission = Color(0.490196, 1, 1, 1)
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_ael4u"]
+lightmap_size_hint = Vector2i(7, 7)
+material = SubResource("StandardMaterial3D_t7685")
+
+[sub_resource type="Curve" id="Curve_wawxh"]
+max_value = 2.0
+_data = [Vector2(0, 0), 0.0, 3.23008, 0, 0, Vector2(0.243948, 0.48421), 1.37033, 1.37033, 0, 0, Vector2(0.378026, 0.610526), 0.827215, 0.827215, 0, 0, Vector2(0.530726, 0.736842), -0.305547, -0.305547, 0, 0, Vector2(1, 0), -0.262912, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="Curve" id="Curve_aucav"]
+min_value = 0.5
+max_value = 1.25
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.0837989, 1.02105), 0.0, 0.0, 0, 0, Vector2(0.156425, 0.642105), 0.0, 0.0, 0, 0, Vector2(0.204842, 1.00526), 0.0, 0.0, 0, 0, Vector2(0.24581, 0.705263), 0.0, 0.0, 0, 0, Vector2(0.307263, 0.973684), 0.0, 0.0, 0, 0, Vector2(0.366853, 0.5), 0.0, 0.0, 0, 0, Vector2(0.420857, 1.02105), 0.0, 0.0, 0, 0, Vector2(0.465549, 0.673684), 0.0, 0.0, 0, 0, Vector2(0.510242, 0.957895), 0.0, 0.0, 0, 0, Vector2(0.581006, 0.689474), 0.0, 0.0, 0, 0, Vector2(0.646182, 1.19474), 0.0, 0.0, 0, 0, Vector2(0.709497, 0.642105), 0.0, 0.0, 0, 0, Vector2(0.763501, 1.1), 0.0, 0.0, 0, 0, Vector2(0.808194, 0.705263), 0.0, 0.0, 0, 0, Vector2(0.877095, 1.19474), 0.0, 0.0, 0, 0, Vector2(0.94041, 0.657894), 0.0, 0.0, 0, 0, Vector2(1, 0.95), 0.0, 0.0, 0, 0]
+point_count = 18
+
+[sub_resource type="Gradient" id="Gradient_rr3r2"]
+offsets = PackedFloat32Array(0, 0.118577, 0.23913, 0.411067, 0.543478, 0.703557, 0.804348, 0.893281, 1)
+colors = PackedColorArray(0.873298, 0.873298, 0.873298, 1, 0, 0.882813, 0.960938, 1, 0.851563, 0.867188, 0.871094, 1, 0.03125, 0.875, 0.953125, 1, 0.851563, 0.867188, 0.871094, 1, 0.258883, 0.884551, 0.938105, 1, 0.835938, 0.863281, 0.867188, 1, 0.0931978, 0.887586, 0.955581, 1, 0.835294, 0.862745, 0.866667, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lgp8x"]
+transparency = 1
+blend_mode = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_crmkq")
+
+[sub_resource type="QuadMesh" id="QuadMesh_2b8l7"]
+material = SubResource("StandardMaterial3D_lgp8x")
+size = Vector2(0.5, 20)
+
+[sub_resource type="Curve" id="Curve_mvsek"]
+min_value = 0.1
+max_value = 100.0
+_data = [Vector2(0, 0.1), 0.0, 0.0, 0, 0, Vector2(1, 20.08), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_ygsng"]
+offsets = PackedFloat32Array(0, 0.924901, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="LevelFinishedEffect" type="Node3D"]
+
+[node name="CPU3D_Bubbles" type="CPUParticles3D" parent="."]
+cast_shadow = 0
+amount = 10
+lifetime = 6.29
+explosiveness = 0.8
+mesh = SubResource("QuadMesh_ael4u")
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0.1, 1, 0.1)
+spread = 90.0
+gravity = Vector3(0, 0.1, 0)
+initial_velocity_min = 3.0
+initial_velocity_max = 3.0
+damping_max = 1.0
+damping_curve = SubResource("Curve_wawxh")
+scale_amount_min = 1.5
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_aucav")
+color_ramp = SubResource("Gradient_rr3r2")
+
+[node name="CPU3D_LightRays" type="CPUParticles3D" parent="."]
+amount = 20
+explosiveness = 0.2
+mesh = SubResource("QuadMesh_2b8l7")
+emission_shape = 1
+emission_sphere_radius = 2.0
+particle_flag_align_y = true
+direction = Vector3(0, 1, 0)
+spread = 90.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = 20.0
+radial_accel_max = 20.0
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_mvsek")
+color_ramp = SubResource("Gradient_ygsng")

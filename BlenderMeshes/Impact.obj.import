@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dxf7gi8egsntq"
+path="res://.godot/imported/Impact.obj-4ca82ca40ee4820900b1760ea44c6299.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Impact.obj-4ca82ca40ee4820900b1760ea44c6299.mesh"]
+
+source_file="res://BlenderMeshes/Impact.obj"
+dest_files=["res://.godot/imported/Impact.obj-4ca82ca40ee4820900b1760ea44c6299.mesh", "res://.godot/imported/Impact.obj-4ca82ca40ee4820900b1760ea44c6299.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

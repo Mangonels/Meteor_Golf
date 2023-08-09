@@ -1,6 +1,6 @@
 extends Node3D
 
-#Simple Orbital Follow Camera (OFC) implementation script
+# Simple Orbital Follow Camera (OFC) implementation script
 
 @export var CameraTarget: Node = null
 
