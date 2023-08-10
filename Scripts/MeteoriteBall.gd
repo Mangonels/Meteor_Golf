@@ -4,6 +4,8 @@ extends RigidBody3D
 @export var RespawnHeightThreshold = 0
 @export var HighLinearVelocityThreshold = 10
 
+@export var FlamingParticles: CPUParticles3D = null
+
 @onready var SwingDirectionPivotBase: Node = get_tree().get_root().get_node("Level/SwingDirectionPivot")
 @onready var DirectionalPivotHeightRegulator: Node = get_tree().get_root().get_node("Level/SwingDirectionPivot/HeightRegulator")
 
@@ -33,11 +35,13 @@ func _process(delta):
 	#Meteorite height offlimits respawn
 	if position.y < RespawnHeightThreshold:
 		GameManager.respawn_meteorite(self)
-
+		
+	#Update particle trail status according to speed
+	FlamingParticles.emitting = true if linear_velocity.length() > HighLinearVelocityThreshold else false
+	
 #A higher frame count loop for physic calculations
 func _integrate_forces(state):
 	var currentContactCount = state.get_contact_count()
-	var currentLinearVelocity = state.get_linear_velocity()
 
 	if currentContactCount > 0 and PreviousPhysicsContactCount == 0 and PreviousPhysicsUpdateVelocity.length() > HighLinearVelocityThreshold:
 		var collisionPoint = state.get_contact_local_position(0)
@@ -45,11 +49,11 @@ func _integrate_forces(state):
 		spawn_impact_effect(collisionPoint, collisionNormal)
 		
 	PreviousPhysicsContactCount = currentContactCount
-	PreviousPhysicsUpdateVelocity = currentLinearVelocity		
+	PreviousPhysicsUpdateVelocity = state.get_linear_velocity()
 
 #Meteorite high velocity impact VFX
 func spawn_impact_effect(collisionPoint: Vector3, collisionNormal: Vector3):
-	var impactEffectInstance = load("res://GameObjects/ImpactExpansionEffect.tscn").instantiate()
+	var impactEffectInstance = load("res://GameObjects/VFX/ImpactExpansionEffect.tscn").instantiate()
 
 	#Set position
 	impactEffectInstance.transform.origin = collisionPoint

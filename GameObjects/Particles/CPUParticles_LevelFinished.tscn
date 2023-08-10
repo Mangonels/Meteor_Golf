@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://cb2r1p3ojpf4k"]
 
-[ext_resource type="Texture2D" uid="uid://t3on2f8h4x27" path="res://Sprites/ParticleSprite_Circle.png" id="1_xf2io"]
-[ext_resource type="Texture2D" uid="uid://cdllof7dbybru" path="res://Sprites/ParticleSprite_Ray.png" id="2_crmkq"]
+[ext_resource type="Texture2D" uid="uid://t3on2f8h4x27" path="res://Sprites/ParticleSprite_Circle.png" id="1_28mix"]
+[ext_resource type="Texture2D" uid="uid://cdllof7dbybru" path="res://Sprites/ParticleSprite_Ray.png" id="2_s2lyy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7685"]
 transparency = 1
 blend_mode = 1
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_xf2io")
+albedo_texture = ExtResource("1_28mix")
 emission = Color(0.490196, 1, 1, 1)
 billboard_mode = 3
 billboard_keep_scale = true
@@ -38,7 +38,7 @@ colors = PackedColorArray(0.873298, 0.873298, 0.873298, 1, 0, 0.882813, 0.960938
 transparency = 1
 blend_mode = 1
 vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("2_crmkq")
+albedo_texture = ExtResource("2_s2lyy")
 
 [sub_resource type="QuadMesh" id="QuadMesh_2b8l7"]
 material = SubResource("StandardMaterial3D_lgp8x")
@@ -58,8 +58,10 @@ colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 
 [node name="CPU3D_Bubbles" type="CPUParticles3D" parent="."]
 cast_shadow = 0
+emitting = false
 amount = 10
 lifetime = 6.29
+one_shot = true
 explosiveness = 0.8
 mesh = SubResource("QuadMesh_ael4u")
 emission_shape = 1
@@ -77,7 +79,9 @@ scale_amount_curve = SubResource("Curve_aucav")
 color_ramp = SubResource("Gradient_rr3r2")
 
 [node name="CPU3D_LightRays" type="CPUParticles3D" parent="."]
+emitting = false
 amount = 20
+one_shot = true
 explosiveness = 0.2
 mesh = SubResource("QuadMesh_2b8l7")
 emission_shape = 1

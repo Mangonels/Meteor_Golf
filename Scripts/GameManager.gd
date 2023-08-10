@@ -23,6 +23,7 @@ var LevelPaths = [
 				 ]
 var CurrentLevelIndex = 0
 var CurrentStrokes = 0
+var MechanicsLocked = false
 var Casualties = 0
 var Destruction = 0
 
@@ -40,6 +41,10 @@ func reload_current_level():
 #Changes the current level for the next level available in LevelPaths array
 func change_to_next_level():
 	change_to_level((CurrentLevelIndex + 1) % LevelPaths.size())
+	
+func level_finished():
+	show_level_results()
+	MechanicsLocked = true
 
 func add_stroke():
 	CurrentStrokes += 1
@@ -55,7 +60,10 @@ func get_strokes():
 	
 func reset_game_status():
 	CurrentStrokes = 0
-
+	MechanicsLocked = false
+	Casualties = 0
+	Destruction = 0
+	
 #Used for meteorite respawn requests
 func respawn_meteorite(meteorite: RigidBody3D):
 	var foundSpawnPoint = get_tree().get_root().get_node("Level/SpawnPoint").global_transform.origin
@@ -64,7 +72,7 @@ func respawn_meteorite(meteorite: RigidBody3D):
 	meteorite.linear_velocity = Vector3.ZERO
 	#Reposition at spawn point
 	meteorite.global_transform.origin = foundSpawnPoint
-	
+
 func show_level_results():
 	var FinalResults = get_tree().get_root().get_node("Level/FinalResults")
 	StrokesDisplay.hide()

@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://daqu4qig86vf5" path="res://GameObjects/SwingDirectionPivot.tscn" id="2_43rjw"]
 [ext_resource type="ArrayMesh" uid="uid://dqjy3yw70rfq2" path="res://BlenderMeshes/FlagPole.obj" id="2_pcn7a"]
 [ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="2_ria2r"]
-[ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://GameObjects/IngameMenu.tscn" id="3_vk57i"]
+[ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://GameObjects/GUI/IngameMenu.tscn" id="3_vk57i"]
 [ext_resource type="PackedScene" uid="uid://bu2kie7r0xa63" path="res://GameObjects/HUD.tscn" id="4_8xbdw"]
 [ext_resource type="PackedScene" uid="uid://n34k1oie6pb4" path="res://GameObjects/Goal.tscn" id="5_w2dl2"]
-[ext_resource type="PackedScene" uid="uid://b7g23gyss1868" path="res://GameObjects/FinalResults.tscn" id="7_yy3nl"]
+[ext_resource type="PackedScene" uid="uid://b7g23gyss1868" path="res://GameObjects/GUI/FinalResults.tscn" id="7_yy3nl"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q0ifl"]
 sky_top_color = Color(0.243137, 0.4, 0.886275, 1)

@@ -1,3 +1,4 @@
+CollisionShape3D
 CPUParticles3D
 CPUParticles2D
 MeshInstance3D
@@ -11,7 +12,6 @@ VBoxContainer
 TextureRect
 ColorRect
 Control
-CollisionShape3D
 Node
 StaticBody3D
 MarginContainer

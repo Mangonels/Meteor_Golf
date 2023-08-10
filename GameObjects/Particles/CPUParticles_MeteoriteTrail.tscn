@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmutu7xounrey"]
+
+[ext_resource type="Texture2D" uid="uid://c3gwyefal3qii" path="res://Sprites/ParticleSprite_Puff.png" id="1_oajt2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jfxt7"]
+transparency = 1
+blend_mode = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_oajt2")
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_qak4x"]
+material = SubResource("StandardMaterial3D_jfxt7")
+
+[sub_resource type="Gradient" id="Gradient_vil0j"]
+offsets = PackedFloat32Array(0, 0.187747, 0.535573, 0.812253, 1)
+colors = PackedColorArray(0.466667, 0, 0, 0, 0.507244, 5.95618e-07, 2.88785e-07, 1, 0.280589, 0.00196076, 0.00260446, 1, 0.160666, 0.00578368, 0.00769875, 1, 0.235294, 0.0117647, 0.0156863, 0.380392)
+
+[node name="CPU3D_Puff" type="CPUParticles3D"]
+emitting = false
+amount = 20
+lifetime = 9.0
+speed_scale = 5.0
+mesh = SubResource("QuadMesh_qak4x")
+emission_shape = 1
+emission_sphere_radius = 3.0
+direction = Vector3(0, 0, 1)
+gravity = Vector3(0, -0.01, 0)
+angular_velocity_min = -30.0
+angular_velocity_max = 30.0
+radial_accel_min = 0.01
+radial_accel_max = 0.01
+scale_amount_max = 3.0
+color_ramp = SubResource("Gradient_vil0j")

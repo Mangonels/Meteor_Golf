@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/SwingDirectionPivot.gd" id="1_e1uht"]
 [ext_resource type="Script" path="res://SwingDirectionPivot_HeightRegulator.gd" id="2_t3dei"]
-[ext_resource type="PackedScene" uid="uid://bdjrpy8m2y1xp" path="res://GameObjects/Orienter.tscn" id="3_1pcty"]
+[ext_resource type="PackedScene" uid="uid://bdjrpy8m2y1xp" path="res://GameObjects/VFX/Orienter.tscn" id="3_1pcty"]
 
 [node name="SwingDirectionPivot" type="Node3D"]
 script = ExtResource("1_e1uht")
