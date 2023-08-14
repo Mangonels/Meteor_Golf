@@ -21,4 +21,4 @@ func restart_level():
 	GameManager.reload_current_level()
 	
 func return_to_main_menu():
-	GameManager.change_to_level(0)
+	GameManager.change_to_main_menu()

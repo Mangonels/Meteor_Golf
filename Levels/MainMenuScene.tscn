@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://diipfcfolrfng"]
+
+[ext_resource type="PackedScene" uid="uid://d3ff81nihlalf" path="res://GameObjects/GUI/MainMenu.tscn" id="1_mt8t6"]
+[ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_rd2ku"]
+[ext_resource type="PackedScene" uid="uid://4fd08cah64nh" path="res://GameObjects/GUI/MainMenuTitle.tscn" id="2_ex26s"]
+[ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="3_5fmnq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_oguwc"]
+sky_top_color = Color(0.243137, 0.4, 0.886275, 1)
+sky_horizon_color = Color(0.0980392, 0.658824, 0.756863, 1)
+ground_bottom_color = Color(0.0976563, 0.65625, 0.753906, 1)
+ground_horizon_color = Color(0.0976563, 0.65625, 0.753906, 1)
+
+[sub_resource type="Sky" id="Sky_og7ek"]
+sky_material = SubResource("ProceduralSkyMaterial_oguwc")
+
+[sub_resource type="Environment" id="Environment_csp0l"]
+background_mode = 2
+sky = SubResource("Sky_og7ek")
+tonemap_mode = 2
+tonemap_white = 16.0
+
+[node name="MainMenuScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_csp0l")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.206115, 0.957343, 0.202514, -0.446882, -0.0920227, 0.889847, 0.870525, -0.273911, 0.408852, 0, 27.7108, 73.7212)
+light_energy = 0.5
+shadow_enabled = true
+
+[node name="MeteoriteBall" parent="." instance=ExtResource("1_rd2ku")]
+transform = Transform3D(-0.824521, 0.565831, 0, -0.565831, -0.824521, 0, 0, 0, 1, 0, 0, 0)
+linear_velocity = Vector3(0, -9.8, 0)
+UseRespawnUnderHeight = false
+
+[node name="OrbitalFollowCamera" parent="." node_paths=PackedStringArray("CameraTarget") instance=ExtResource("3_5fmnq")]
+CameraTarget = NodePath("../MeteoriteBall")
+OFCDisplacement = Vector3(0, 5, 0)
+OFCDistance = 14.0
+DistanceZoomingEnabled = false
+
+[node name="MainMenu" parent="." instance=ExtResource("1_mt8t6")]
+
+[node name="MainMenuTitle" parent="." instance=ExtResource("2_ex26s")]

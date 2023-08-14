@@ -1,6 +1,7 @@
 extends RigidBody3D
 
 @export var DownfallImpulse = 60.0
+@export var UseRespawnUnderHeight = true
 @export var RespawnHeightThreshold = 0
 @export var HighLinearVelocityThreshold = 10
 
@@ -33,7 +34,7 @@ func _process(delta):
 		TimeSinceLastGrounded += delta
 
 	#Meteorite height offlimits respawn
-	if position.y < RespawnHeightThreshold:
+	if UseRespawnUnderHeight and position.y < RespawnHeightThreshold:
 		GameManager.respawn_meteorite(self)
 		
 	#Update particle trail status according to speed

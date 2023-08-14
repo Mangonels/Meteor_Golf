@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://4fd08cah64nh"]
+
+[ext_resource type="Texture2D" uid="uid://b71x4qqvkwfbe" path="res://Sprites/MeteorGolf title.png" id="1_mgien"]
+
+[node name="MainMenuTitle" type="Control"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -585.0
+offset_top = 10.5
+offset_right = 585.0
+offset_bottom = 596.5
+grow_horizontal = 2
+scale = Vector2(0.55, 0.55)
+pivot_offset = Vector2(586.355, 0)
+texture = ExtResource("1_mgien")

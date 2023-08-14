@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://bu2kie7r0xa63"]
+[gd_scene load_steps=4 format=3 uid="uid://bu2kie7r0xa63"]
 
 [ext_resource type="Script" path="res://Scripts/DrivePowerDisplay.gd" id="1_yclxk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cxfcu"]
+font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_xx55d"]
+font_size = 33
+font_color = Color(0.517647, 0.898039, 0.454902, 1)
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -13,15 +20,26 @@ offset_top = 34.0
 offset_right = 1052.0
 offset_bottom = 60.0
 grow_horizontal = 0
-text = "STROKES : 0"
+text = "Strokes: 0"
+label_settings = SubResource("LabelSettings_cxfcu")
 
 [node name="SwingAvailability" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 159.0
-offset_top = 28.0
-offset_right = 199.0
-offset_bottom = 68.0
+offset_left = 909.0
+offset_top = 89.0
+offset_right = 949.0
+offset_bottom = 129.0
+scale = Vector2(0.680001, 0.68)
 color = Color(0.141176, 0.662745, 0.239216, 1)
+
+[node name="Label" type="Label" parent="SwingAvailability"]
+layout_mode = 0
+offset_left = 52.9411
+offset_top = -4.41176
+offset_right = 161.941
+offset_bottom = 44.5882
+text = "SWING"
+label_settings = SubResource("LabelSettings_xx55d")
 
 [node name="DrivePowerDisplay" type="Control" parent="." node_paths=PackedStringArray("PowerMeasure")]
 layout_mode = 1

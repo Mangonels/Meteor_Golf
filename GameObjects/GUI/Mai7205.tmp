@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3ff81nihlalf"]
+
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_q4tvx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h0bks"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxns4"]
+bg_color = Color(0.819608, 0.45098, 0.501961, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.384314, 0.156863, 0.196078, 0.392157)
+corner_radius_top_left = 1024
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_emixu"]
+bg_color = Color(0.733333, 0.360784, 0.415686, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.384314, 0.156863, 0.196078, 0.658824)
+corner_radius_top_left = 1024
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8k2s"]
+bg_color = Color(0.509804, 0.223529, 0.270588, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.384314, 0.156863, 0.196078, 0.392157)
+corner_radius_top_left = 1024
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="Theme" id="Theme_qqnbt"]
+Button/styles/focus = SubResource("StyleBoxEmpty_h0bks")
+Button/styles/hover = SubResource("StyleBoxFlat_vxns4")
+Button/styles/normal = SubResource("StyleBoxFlat_emixu")
+Button/styles/pressed = SubResource("StyleBoxFlat_g8k2s")
+
+[sub_resource type="LabelSettings" id="LabelSettings_0h6m1"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 56.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_qqnbt")
+script = ExtResource("1_q4tvx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.5
+offset_top = -57.0
+offset_right = 195.5
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "The friendly golfing game where nobody has to die"
+label_settings = SubResource("LabelSettings_0h6m1")
+
+[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="VBoxContainer/MarginContainer3"]
+layout_mode = 2
+text = "START"
+
+[node name="MarginContainer4" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer/MarginContainer4"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "by Dylan Calaf"
+uri = "https://www.dylancalaflatham.com"
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer3/Start" to="." method="begin_game"]

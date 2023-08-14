@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7g23gyss1868"]
+[gd_scene load_steps=4 format=3 uid="uid://b7g23gyss1868"]
 
 [ext_resource type="Script" path="res://Scripts/FinalResults.gd" id="1_x6jns"]
+[ext_resource type="Texture2D" uid="uid://bmfj52mouhild" path="res://Sprites/Results.png" id="2_ekti5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yka3j"]
+font_size = 30
 
 [node name="FinalResults" type="Control" node_paths=PackedStringArray("ResultsDisplay")]
 layout_mode = 3
@@ -12,20 +16,37 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_x6jns")
-ResultsDisplay = NodePath("TextureRect/ResultsDisplay")
+ResultsDisplay = NodePath("ResultsDisplay")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_top = -19.0
-offset_right = 40.0
-offset_bottom = 21.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.0
+offset_top = -306.0
+offset_right = 537.0
+offset_bottom = 634.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_ekti5")
 
-[node name="ResultsDisplay" type="Label" parent="TextureRect"]
-layout_mode = 0
-offset_left = -74.0
-offset_top = -67.0
-offset_right = 74.0
-offset_bottom = 63.0
+[node name="ResultsDisplay" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -160.0
+offset_right = 109.0
+offset_bottom = 155.0
+grow_horizontal = 2
+grow_vertical = 2
 text = " LEVEL X RESULTS
 
 Strokes:
@@ -33,3 +54,4 @@ Destruction:
 Golf Score:
 Casualties:
 Game Score:"
+label_settings = SubResource("LabelSettings_yka3j")
