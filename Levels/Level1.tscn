@@ -16,12 +16,12 @@ sky_horizon_color = Color(0.0980392, 0.658824, 0.756863, 1)
 ground_bottom_color = Color(0.0976563, 0.65625, 0.753906, 1)
 ground_horizon_color = Color(0.0976563, 0.65625, 0.753906, 1)
 
-[sub_resource type="Sky" id="Sky_5ionb"]
+[sub_resource type="Sky" id="Sky_u1dga"]
 sky_material = SubResource("ProceduralSkyMaterial_q0ifl")
 
 [sub_resource type="Environment" id="Environment_gtv8t"]
 background_mode = 2
-sky = SubResource("Sky_5ionb")
+sky = SubResource("Sky_u1dga")
 tonemap_mode = 2
 tonemap_white = 16.0
 
@@ -47,7 +47,7 @@ vertex_color_use_as_albedo = true
 environment = SubResource("Environment_gtv8t")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(0.206115, 0.957343, 0.202514, -0.446882, -0.0920227, 0.889847, 0.870525, -0.273911, 0.408852, 0, 27.7108, 73.7212)
+transform = Transform3D(0.00306637, 0.954373, 0.298602, 0.778349, -0.189749, 0.598472, 0.627825, 0.230581, -0.743417, 0, 27.7108, 73.7212)
 light_energy = 0.5
 shadow_enabled = true
 
@@ -62,6 +62,7 @@ skeleton = NodePath("../../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Lv1_Layout/Terrain_Lv1"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Lv1_Layout/Terrain_Lv1/StaticBody3D"]
+visible = false
 shape = SubResource("ConcavePolygonShape3D_h50dw")
 
 [node name="Sea" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
