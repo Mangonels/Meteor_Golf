@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2s7bgr150egw"]
+
+[ext_resource type="Script" path="res://FracturedMesh.gd" id="1_3ascc"]
+
+[node name="Building_E" type="Node3D"]
+script = ExtResource("1_3ascc")

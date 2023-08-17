@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://diipfcfolrfng"]
 
-[ext_resource type="PackedScene" uid="uid://d3ff81nihlalf" path="res://GameObjects/GUI/MainMenu.tscn" id="1_mt8t6"]
+[ext_resource type="PackedScene" uid="uid://s5tuy7jhx5gh" path="res://GameObjects/GUI/MainMenu.tscn" id="1_mt8t6"]
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_rd2ku"]
 [ext_resource type="PackedScene" uid="uid://4fd08cah64nh" path="res://GameObjects/GUI/MainMenuTitle.tscn" id="2_ex26s"]
 [ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="3_5fmnq"]
@@ -41,6 +41,6 @@ OFCDisplacement = Vector3(0, 5, 0)
 OFCDistance = 14.0
 DistanceZoomingEnabled = false
 
-[node name="MainMenu" parent="." instance=ExtResource("1_mt8t6")]
-
 [node name="MainMenuTitle" parent="." instance=ExtResource("2_ex26s")]
+
+[node name="MainMenu" parent="." instance=ExtResource("1_mt8t6")]

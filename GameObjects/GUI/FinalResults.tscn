@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7g23gyss1868"]
 
-[ext_resource type="Script" path="res://Scripts/FinalResults.gd" id="1_x6jns"]
+[ext_resource type="Script" path="res://Scripts/GUI/FinalResults.gd" id="1_eftv4"]
 [ext_resource type="Texture2D" uid="uid://bmfj52mouhild" path="res://Sprites/Results.png" id="2_ekti5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yka3j"]
@@ -15,7 +15,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_x6jns")
+script = ExtResource("1_eftv4")
 ResultsDisplay = NodePath("ResultsDisplay")
 
 [node name="TextureRect" type="TextureRect" parent="."]

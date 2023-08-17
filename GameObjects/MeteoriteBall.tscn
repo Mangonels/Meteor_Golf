@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bcymciac3bg8w"]
 
-[ext_resource type="Script" path="res://Scripts/MeteoriteBall.gd" id="1_1x3nm"]
+[ext_resource type="Script" path="res://Scripts/GameObjects/MeteoriteBall.gd" id="1_ks6e1"]
 [ext_resource type="ArrayMesh" uid="uid://c4kc2je4iuemc" path="res://BlenderMeshes/Meteorite.obj" id="2_n7x2d"]
 [ext_resource type="PackedScene" uid="uid://cmutu7xounrey" path="res://GameObjects/Particles/CPUParticles_MeteoriteTrail.tscn" id="3_7jg2p"]
 
@@ -15,7 +15,7 @@ height = 1.25608
 [node name="MeteoriteBall" type="RigidBody3D" node_paths=PackedStringArray("FlamingParticles")]
 collision_layer = 2
 angular_damp = 1.0
-script = ExtResource("1_1x3nm")
+script = ExtResource("1_ks6e1")
 FlamingParticles = NodePath("CPU3D_Puff")
 
 [node name="Meteorite" type="MeshInstance3D" parent="."]
