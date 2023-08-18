@@ -4,3 +4,5 @@
 
 [node name="Building_E" type="Node3D"]
 script = ExtResource("1_3ascc")
+
+[node name="Shards" type="Node3D" parent="."]

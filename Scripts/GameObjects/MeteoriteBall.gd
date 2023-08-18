@@ -1,14 +1,15 @@
 extends RigidBody3D
 
+@onready var SwingDirectionPivotBase: Node = get_tree().get_root().get_node("Level/SwingDirectionPivot")
+@onready var DirectionalPivotHeightRegulator: Node = get_tree().get_root().get_node("Level/SwingDirectionPivot/HeightRegulator")
+@onready var OrbitalFollowCamera: Node = get_tree().get_root().get_node("Level/OrbitalFollowCamera")
+
 @export var DownfallImpulse = 60.0
 @export var UseRespawnUnderHeight = true
 @export var RespawnHeightThreshold = 0
 @export var HighLinearVelocityThreshold = 10
 
 @export var FlamingParticles: CPUParticles3D = null
-
-@onready var SwingDirectionPivotBase: Node = get_tree().get_root().get_node("Level/SwingDirectionPivot")
-@onready var DirectionalPivotHeightRegulator: Node = get_tree().get_root().get_node("Level/SwingDirectionPivot/HeightRegulator")
 
 var TimeSinceLastGrounded = 0.0
 var PreviousPhysicsUpdateVelocity = Vector3.ZERO
@@ -45,9 +46,11 @@ func _integrate_forces(state):
 	var currentContactCount = state.get_contact_count()
 
 	if currentContactCount > 0 and PreviousPhysicsContactCount == 0 and PreviousPhysicsUpdateVelocity.length() > HighLinearVelocityThreshold:
+		#Hit ground
 		var collisionPoint = state.get_contact_local_position(0)
 		var collisionNormal = state.get_contact_local_normal(0)	
 		spawn_impact_effect(collisionPoint, collisionNormal)
+		OrbitalFollowCamera.camera_shake()
 		
 	PreviousPhysicsContactCount = currentContactCount
 	PreviousPhysicsUpdateVelocity = state.get_linear_velocity()

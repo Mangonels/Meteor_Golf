@@ -2,6 +2,9 @@ extends Node3D
 
 # Simple Orbital Follow Camera (OFC) implementation script
 
+@export var SpringArm : SpringArm3D
+@export var Camera : Camera3D
+
 @export var CameraTarget: Node = null
 
 @export var OFCDisplacement: Vector3 = Vector3(0, 2, 0)
@@ -14,8 +17,14 @@ extends Node3D
 @export var OrbitingEnabled = true
 @export var DistanceZoomingEnabled = true
 
+@export var ShakeRandomStrength: float = 0.5
+@export var ShakeFade: float = 5.0
+
+var RNG = RandomNumberGenerator.new()
+var ShakeStrength: float = 0.0
+
 func _ready():
-	$SpringArm3D.spring_length = OFCDistance
+	SpringArm.spring_length = OFCDistance
 
 func _input(event):
 	if OrbitingEnabled and event is InputEventMouseMotion:
@@ -26,16 +35,27 @@ func _input(event):
 	if DistanceZoomingEnabled and event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			OFCDistance = clamp(OFCDistance - OrbitDistanceVariation, MinOFCDistance, MaxOFCDistance)
-			$SpringArm3D.spring_length = OFCDistance
+			SpringArm.spring_length = OFCDistance
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			OFCDistance = clamp(OFCDistance + OrbitDistanceVariation, MinOFCDistance, MaxOFCDistance)
-			$SpringArm3D.spring_length = OFCDistance
+			SpringArm.spring_length = OFCDistance
 
 func _process(delta):
 	transform.origin = CameraTarget.transform.origin + OFCDisplacement
 	
+	if ShakeStrength > 0:
+		ShakeStrength = lerpf(ShakeStrength, 0, ShakeFade * delta)
+		Camera.h_offset = random_offset()
+		Camera.v_offset = random_offset()
+		
 func disable_orbiting():
 	OrbitingEnabled = false
 	
 func enable_orbiting():
 	OrbitingEnabled = true
+	
+func random_offset():
+	return RNG.randf_range(-ShakeStrength, ShakeStrength)
+	
+func camera_shake():
+	ShakeStrength = ShakeRandomStrength

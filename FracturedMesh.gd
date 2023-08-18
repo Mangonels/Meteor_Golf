@@ -1,18 +1,20 @@
 @tool
-extends Spatial
+extends Node3D
 
-export(bool) var create_rigids = false
+@export var create_rigids = false : set = _create_rigids
+@export var get_shard_positions = false : set = _get_shard_positions
+@export var reset = false : set = _reset
 
 var shard_positions = {}
 
 func _process(delta):
-	if Engine.editor_hint:
+	if Engine.is_editor_hint():
 		if Input.is_key_pressed(KEY_P):
 			print("on")
-			PhysicsServer.set_active(true)
+			set_physics_process(true)
 		elif Input.is_key_pressed(KEY_N):
 			print("off")
-			PhysicsServer.set_active(false)
+			set_physics_process(false)
 			
 func _get_shard_positions(_value):
 	shard_positions = {}
@@ -28,7 +30,7 @@ func _reset(_value):
 		
 
 func _create_rigids(_value):
-	if Engine.editor_hint:
+	if Engine.is_editor_hint():
 		for node in $Shards.get_children():
 			if node.name.find("cell") != -1:
 

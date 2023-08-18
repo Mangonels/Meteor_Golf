@@ -2,8 +2,10 @@
 
 [ext_resource type="Script" path="res://Scripts/GameObjects/OrbitalFollowCamera.gd" id="1_e72ab"]
 
-[node name="OrbitalFollowCamera" type="Node3D"]
+[node name="OrbitalFollowCamera" type="Node3D" node_paths=PackedStringArray("SpringArm", "Camera")]
 script = ExtResource("1_e72ab")
+SpringArm = NodePath("SpringArm3D")
+Camera = NodePath("SpringArm3D/Camera3D")
 
 [node name="SpringArm3D" type="SpringArm3D" parent="."]
 spring_length = 12.0
