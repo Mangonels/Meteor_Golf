@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://cjlfceogj7p64"]
+
+[node name="RigidBody" type="RigidBody3D"]
+collision_mask = 3
+mass = 0.01

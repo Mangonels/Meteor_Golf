@@ -19,56 +19,52 @@ func _process(delta):
 func _get_shard_positions(_value):
 	shard_positions = {}
 	for shard in $Shards.get_children():
-		shard_positions[shard] = [shard.translation, shard.rotation_degrees]
-	print("Got positions")
+		shard_positions[shard] = [shard.transform.origin, shard.rotation_degrees]
+	print("Positions registered.")
 		
 func _reset(_value):
 	for shard in $Shards.get_children():
-		shard.translation = shard_positions[shard][0]
+		shard.transform.origin = shard_positions[shard][0]
 		shard.rotation_degrees = shard_positions[shard][1]
 	print("Reset Positions")
 		
-
 func _create_rigids(_value):
 	if Engine.is_editor_hint():
 		for node in $Shards.get_children():
 			if node.name.find("cell") != -1:
+				var rigidbodyInstance = load("res://RigidBody.tscn").instantiate()
 
-				var resource_rigidbody = load("RigidBody.tscn")
-				
-				var s_rigid_body = resource_rigidbody.instance()
+				rigidbodyInstance.transform.origin = node.transform.origin
+				rigidbodyInstance.scale = Vector3(1,1,1)
 
-				s_rigid_body.translation = node.translation
-				s_rigid_body.scale = Vector3(1,1,1)
+				$Shards.add_child(rigidbodyInstance)
+				rigidbodyInstance.set_owner(get_tree().get_edited_scene_root())
 
-				$Shards.add_child(s_rigid_body)
-				s_rigid_body.set_owner(get_tree().get_edited_scene_root())
-
-				var mesh_node = node
+				var meshNode = node
 
 				$Shards.remove_child(node)
 
-				mesh_node.translation = Vector3(0,0,0)
-				mesh_node.scale = Vector3(1,1,1)
+				meshNode.transform.origin = Vector3(0,0,0)
+				meshNode.scale = Vector3(1,1,1)
 
-				s_rigid_body.add_child(mesh_node)
+				rigidbodyInstance.add_child(meshNode)
 
-				mesh_node.set_owner(get_tree().get_edited_scene_root())
+				meshNode.set_owner(get_tree().get_edited_scene_root())
 
 
 				# creates a static body with collision shape
 				# mesh/static body/collision shape
-				mesh_node.create_convex_collision()
+				meshNode.create_convex_collision()
 
 				# grabs newly created collision shape
-				var collision_node = mesh_node.get_child(0).get_child(0)
+				var collisionNode = meshNode.get_child(0).get_child(0)
 
 				# removes collision shape
-				s_rigid_body.get_child(0).get_child(0).remove_child(mesh_node.get_child(0).get_child(0))
+				rigidbodyInstance.get_child(0).get_child(0).remove_child(meshNode.get_child(0).get_child(0))
 				# removes static body
-				s_rigid_body.get_child(0).remove_child(mesh_node.get_child(0))
+				rigidbodyInstance.get_child(0).remove_child(meshNode.get_child(0))
 
 				# re-adds the collision shape, this as a direct child of the rigid body
-				s_rigid_body.add_child(collision_node)
-				
-				collision_node.set_owner(get_tree().get_edited_scene_root())
+				rigidbodyInstance.add_child(collisionNode)
+
+				collisionNode.set_owner(get_tree().get_edited_scene_root())

@@ -44,13 +44,17 @@ func _process(delta):
 #A higher frame count loop for physic calculations
 func _integrate_forces(state):
 	var currentContactCount = state.get_contact_count()
-
-	if currentContactCount > 0 and PreviousPhysicsContactCount == 0 and PreviousPhysicsUpdateVelocity.length() > HighLinearVelocityThreshold:
+	var previousVelocity = PreviousPhysicsUpdateVelocity.length()
+	
+	if currentContactCount > 0 and PreviousPhysicsContactCount == 0 and previousVelocity > HighLinearVelocityThreshold:
 		#Hit ground
 		var collisionPoint = state.get_contact_local_position(0)
 		var collisionNormal = state.get_contact_local_normal(0)	
 		spawn_impact_effect(collisionPoint, collisionNormal)
-		OrbitalFollowCamera.camera_shake()
+		
+		var camShakeRelevantVelocityRange = clamp(previousVelocity, HighLinearVelocityThreshold, 30.0)
+		var shakeMagnitudeFraction = 0.3 + (0.7 * (camShakeRelevantVelocityRange - HighLinearVelocityThreshold) / (30 - HighLinearVelocityThreshold))
+		OrbitalFollowCamera.camera_shake(shakeMagnitudeFraction)
 		
 	PreviousPhysicsContactCount = currentContactCount
 	PreviousPhysicsUpdateVelocity = state.get_linear_velocity()

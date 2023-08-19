@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bk35bpemgfmky"]
+[gd_scene load_steps=22 format=3 uid="uid://bk35bpemgfmky"]
 
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_e7uaf"]
 [ext_resource type="ArrayMesh" uid="uid://dkfvu4gfw0mrg" path="res://BlenderMeshes/Terrain_lv1.obj" id="1_u72ge"]
@@ -41,6 +41,10 @@ albedo_color = Color(0, 0.682353, 0.831373, 1)
 vertex_color_use_as_albedo = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5djom"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qfr2p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r1u1i"]
 
 [node name="Level" type="Node3D"]
 
@@ -121,6 +125,25 @@ transform = Transform3D(1.38231, 0, 0, 0, 1.38231, 0, 0, 0, 1.38231, -26.3233, 3
 [node name="HUD" parent="." instance=ExtResource("4_8xbdw")]
 
 [node name="IngameMenu" parent="." instance=ExtResource("3_vk57i")]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4979, -0.40735, -3.18218)
+visible = false
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+gravity_scale = 0.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+mesh = SubResource("BoxMesh_qfr2p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+shape = SubResource("BoxShape3D_r1u1i")
 
 [connection signal="body_entered" from="Bounds/TeleporterArea" to="Bounds/TeleporterArea" method="on_body_entered" flags=18]
 [connection signal="body_entered" from="Bounds/TeleporterArea2" to="Bounds/TeleporterArea2" method="on_body_entered" flags=18]

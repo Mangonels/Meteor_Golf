@@ -1,9 +1,10 @@
-res://Scripts/GameObjects/BreakableMeshes/Building_E.tscn
-res://FracturedMesh.gd
-res://GameObjects/FollowCamera.tscn
-res://Scripts/GameObjects/OrbitalFollowCamera.gd
-res://GameObjects/MeteoriteBall.tscn
+res://GameObjects/BreakableProps/Building_E.tscn
+res://GameObjects/BreakableProps/Building_D.tscn
 res://Levels/Level1.tscn
+res://GameObjects/MeteoriteBall.tscn
+res://GameObjects/FollowCamera.tscn
 res://GameObjects/GUI/MainMenu.tscn
-res://Scripts/GUI/MainMenu.gd
+res://RigidBody.tscn
+res://building_d.tscn
+res://Scripts/GameObjects/OrbitalFollowCamera.gd
 res://Scripts/GameObjects/MeteoriteBall.gd

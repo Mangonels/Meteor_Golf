@@ -17,8 +17,8 @@ extends Node3D
 @export var OrbitingEnabled = true
 @export var DistanceZoomingEnabled = true
 
-@export var ShakeRandomStrength: float = 0.5
-@export var ShakeFade: float = 5.0
+@export var ShakeMaxRandomStrength: float = 0.5
+@export var ShakeFade: float = 5
 
 var RNG = RandomNumberGenerator.new()
 var ShakeStrength: float = 0.0
@@ -47,15 +47,15 @@ func _process(delta):
 		ShakeStrength = lerpf(ShakeStrength, 0, ShakeFade * delta)
 		Camera.h_offset = random_offset()
 		Camera.v_offset = random_offset()
-		
+
 func disable_orbiting():
 	OrbitingEnabled = false
 	
 func enable_orbiting():
 	OrbitingEnabled = true
-	
+
 func random_offset():
 	return RNG.randf_range(-ShakeStrength, ShakeStrength)
-	
-func camera_shake():
-	ShakeStrength = ShakeRandomStrength
+
+func camera_shake(shakeMagnitudeFraction: float):
+	ShakeStrength = ShakeMaxRandomStrength * shakeMagnitudeFraction
