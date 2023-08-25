@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bdjrpy8m2y1xp"]
 
-[ext_resource type="ArrayMesh" uid="uid://845iofgg35be" path="res://BlenderMeshes/Orienter.obj" id="1_qkrrn"]
+[ext_resource type="ArrayMesh" uid="uid://845iofgg35be" path="res://3DModels/ExportedMeshes/Orienter.obj" id="1_qkrrn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf66i"]
 vertex_color_use_as_albedo = true

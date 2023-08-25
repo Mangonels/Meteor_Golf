@@ -5,6 +5,7 @@ extends RigidBody3D
 @onready var OrbitalFollowCamera: Node = get_tree().get_root().get_node("Level/OrbitalFollowCamera")
 
 @export var DownfallImpulse = 60.0
+@export var ImpactEffectsCooldown: Timer = null
 @export var UseRespawnUnderHeight = true
 @export var RespawnHeightThreshold = 0
 @export var HighLinearVelocityThreshold = 10
@@ -46,8 +47,10 @@ func _integrate_forces(state):
 	var currentContactCount = state.get_contact_count()
 	var previousVelocity = PreviousPhysicsUpdateVelocity.length()
 	
-	if currentContactCount > 0 and PreviousPhysicsContactCount == 0 and previousVelocity > HighLinearVelocityThreshold:
-		#Hit ground
+	if ImpactEffectsCooldown.is_stopped() and currentContactCount > 0 and PreviousPhysicsContactCount == 0 and previousVelocity > HighLinearVelocityThreshold:
+		#Ground was hit from airborne after cooldown, apply effects:
+		ImpactEffectsCooldown.start()
+		
 		var collisionPoint = state.get_contact_local_position(0)
 		var collisionNormal = state.get_contact_local_normal(0)	
 		spawn_impact_effect(collisionPoint, collisionNormal)
@@ -83,6 +86,8 @@ func spawn_impact_effect(collisionPoint: Vector3, collisionNormal: Vector3):
 
 #Function to throw the golf ball in the forward direction
 func do_impulse_self(impulseForce: float):
+	ImpactEffectsCooldown.stop()
+	
 	var orientationRotation = SwingDirectionPivotBase.rotation.y
 	print(str(orientationRotation))
 	var heightRotation = DirectionalPivotHeightRegulator.rotation.x

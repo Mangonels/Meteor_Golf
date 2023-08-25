@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2vbutxrhkhqm"]
+
+[ext_resource type="Script" path="res://Scripts/FracturedModelReplacer.gd" id="1_hjf0l"]
+[ext_resource type="PackedScene" uid="uid://btbv4b56j74bi" path="res://GameObjects/BreakableProps/Building_Top_Fractured_Normal_AltColor_2.tscn" id="2_e7imd"]
+[ext_resource type="Material" uid="uid://d2w0ni6m27mw3" path="res://Materials/Material_6.tres" id="3_56sfr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b0dhy"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_t22m2"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2.00001),
+"format": 4097,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0, 2, 0, 7, 0, 3, 0, 2, 0, 6, 0, 7, 0, 6, 0, 5, 0, 7, 0, 6, 0, 4, 0, 5, 0, 4, 0, 1, 0, 5, 0, 4, 0, 0, 0, 1, 0, 2, 0, 4, 0, 6, 0, 2, 0, 0, 0, 4, 0, 7, 0, 1, 0, 3, 0, 7, 0, 5, 0, 1, 0),
+"primitive": 3,
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_drwy6"]
+resource_name = "Building_Top_Cube_037"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2.00001),
+"format": 4099,
+"index_count": 36,
+"index_data": PackedByteArray(0, 0, 9, 0, 3, 0, 0, 0, 6, 0, 9, 0, 8, 0, 21, 0, 10, 0, 8, 0, 19, 0, 21, 0, 20, 0, 17, 0, 23, 0, 20, 0, 14, 0, 17, 0, 13, 0, 4, 0, 15, 0, 13, 0, 2, 0, 4, 0, 7, 0, 12, 0, 18, 0, 7, 0, 1, 0, 12, 0, 22, 0, 5, 0, 11, 0, 22, 0, 16, 0, 5, 0),
+"material": SubResource("StandardMaterial3D_b0dhy"),
+"primitive": 3,
+"vertex_count": 24,
+"vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 255, 127, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 255, 127, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 255, 127, 255, 127, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 255, 127, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 255, 127, 255, 127, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 255, 127, 255, 255, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 255, 127, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 255, 127, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 255, 255, 255, 255, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 255, 127, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 255, 255, 255, 255, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 255, 127, 255, 255, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 255, 127, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 255, 127, 255, 127, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 255, 255, 255, 127, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 255, 127, 255, 127, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 255, 127, 255, 255, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 255, 255, 255, 127, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 255, 127, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 255, 255, 255, 255, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 255, 255, 255, 127, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 255, 255, 255, 255, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 255, 127, 255, 255, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_t22m2")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8b828"]
+points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1)
+
+[node name="Building_Top_AltColor_2" type="Area3D"]
+collision_mask = 2
+script = ExtResource("1_hjf0l")
+FracturedResourceHigh = ExtResource("2_e7imd")
+FracturedResourceLow = ExtResource("2_e7imd")
+
+[node name="Building_Top2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.12631, 0, 0, 0, 0.101636, 0, 0, 0, 1.12631, 0.00389242, 0.122355, 0)
+material_override = ExtResource("3_56sfr")
+mesh = SubResource("ArrayMesh_drwy6")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.12631, 0, 0, 0, 0.101636, 0, 0, 0, 1.12631, 0.00389242, 0.122355, 0)
+shape = SubResource("ConvexPolygonShape3D_8b828")
+
+[connection signal="body_entered" from="." to="." method="on_body_entered"]

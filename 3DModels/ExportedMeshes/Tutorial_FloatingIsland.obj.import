@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0kggruhlti1j"
+path="res://.godot/imported/Tutorial_FloatingIsland.obj-c7390c615fc46fd5604030287f6948c0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tutorial_FloatingIsland.obj-c7390c615fc46fd5604030287f6948c0.mesh"]
+
+source_file="res://3DModels/ExportedMeshes/Tutorial_FloatingIsland.obj"
+dest_files=["res://.godot/imported/Tutorial_FloatingIsland.obj-c7390c615fc46fd5604030287f6948c0.mesh", "res://.godot/imported/Tutorial_FloatingIsland.obj-c7390c615fc46fd5604030287f6948c0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

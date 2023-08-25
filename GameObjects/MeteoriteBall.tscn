@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bcymciac3bg8w"]
 
 [ext_resource type="Script" path="res://Scripts/GameObjects/MeteoriteBall.gd" id="1_ks6e1"]
-[ext_resource type="ArrayMesh" uid="uid://c4kc2je4iuemc" path="res://BlenderMeshes/Meteorite.obj" id="2_n7x2d"]
+[ext_resource type="ArrayMesh" uid="uid://c4kc2je4iuemc" path="res://3DModels/ExportedMeshes/Meteorite.obj" id="2_cldt3"]
 [ext_resource type="PackedScene" uid="uid://cmutu7xounrey" path="res://GameObjects/Particles/CPUParticles_MeteoriteTrail.tscn" id="3_7jg2p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykbwr"]
@@ -12,16 +12,17 @@ height = 1.25608
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_uc5ph"]
 
-[node name="MeteoriteBall" type="RigidBody3D" node_paths=PackedStringArray("FlamingParticles")]
+[node name="MeteoriteBall" type="RigidBody3D" node_paths=PackedStringArray("ImpactEffectsCooldown", "FlamingParticles")]
 collision_layer = 2
 angular_damp = 1.0
 script = ExtResource("1_ks6e1")
+ImpactEffectsCooldown = NodePath("ImpactEffectsCooldown")
 FlamingParticles = NodePath("CPU3D_Puff")
 
 [node name="Meteorite" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.394398, 0.914152, 0.0936819, 0.442706, -0.0996786, -0.891109, -0.805271, 0.392925, -0.444013, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_ykbwr")
-mesh = ExtResource("2_n7x2d")
+mesh = ExtResource("2_cldt3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.755426, 3.35243, 0.663752, 2.13235, 0.0688481, -2.77459, -2.67066, 1.00324, -2.02758, 0.0702209, 0.116529, -0.0184078)
@@ -48,3 +49,6 @@ transform = Transform3D(1.56249, 0, 0, 0, 1.56249, 0, 0, 0, 1.56249, 1.51021, -0
 shape = SubResource("SphereShape3D_uc5ph")
 
 [node name="CPU3D_Puff" parent="." instance=ExtResource("3_7jg2p")]
+
+[node name="ImpactEffectsCooldown" type="Timer" parent="."]
+wait_time = 2.0

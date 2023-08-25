@@ -17,7 +17,7 @@ extends Node3D
 @export var OrbitingEnabled = true
 @export var DistanceZoomingEnabled = true
 
-@export var ShakeMaxRandomStrength: float = 0.5
+@export var ShakeMaxRandomStrength: float = 1
 @export var ShakeFade: float = 5
 
 var RNG = RandomNumberGenerator.new()

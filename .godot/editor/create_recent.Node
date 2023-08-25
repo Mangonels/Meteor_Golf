@@ -1,11 +1,11 @@
+Timer
+Node
+Area3D
 CollisionShape3D
 MeshInstance3D
 RigidBody3D
 Node3D
 Camera3D
-Timer
-Node
-Area3D
 Label
 Container
 TextureRect

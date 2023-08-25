@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dyg1568es10av"]
 
-[ext_resource type="ArrayMesh" uid="uid://dxf7gi8egsntq" path="res://BlenderMeshes/Impact.obj" id="1_a15np"]
+[ext_resource type="ArrayMesh" uid="uid://dxf7gi8egsntq" path="res://3DModels/ExportedMeshes/Impact.obj" id="1_a15np"]
 [ext_resource type="Script" path="res://Scripts/ImpactAnimation.gd" id="2_38643"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6p0x"]

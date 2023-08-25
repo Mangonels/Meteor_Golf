@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://845iofgg35be"
+path="res://.godot/imported/Orienter.obj-b87bd5219dafea2e65f726e162e4d6de.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Orienter.obj-b87bd5219dafea2e65f726e162e4d6de.mesh"]
+
+source_file="res://3DModels/ExportedMeshes/Orienter.obj"
+dest_files=["res://.godot/imported/Orienter.obj-b87bd5219dafea2e65f726e162e4d6de.mesh", "res://.godot/imported/Orienter.obj-b87bd5219dafea2e65f726e162e4d6de.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -69,7 +69,10 @@ func add_stroke():
 
 func get_strokes():
 	return CurrentStrokes
-	
+
+func add_destruction_points(destruction: int):
+	Destruction += destruction
+
 func reset_game_status():
 	CurrentStrokes = 0
 	MechanicsLocked = false
