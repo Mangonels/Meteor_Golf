@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpfaney2fnqml"]
+[gd_scene load_steps=9 format=3 uid="uid://dpfaney2fnqml"]
 
 [ext_resource type="Script" path="res://Scripts/FracturedModelReplacer.gd" id="1_g6vth"]
-[ext_resource type="PackedScene" uid="uid://buqtk3rim7tbe" path="res://GameObjects/BreakableProps/Road_Fractured_High.tscn" id="2_a0qrn"]
-[ext_resource type="PackedScene" uid="uid://ctl3ug3jrmmaf" path="res://GameObjects/BreakableProps/Road_Fractured_Low.tscn" id="3_xhbgt"]
+[ext_resource type="PackedScene" uid="uid://ctl3ug3jrmmaf" path="res://GameObjects/BreakableProps/Road_Fractured_Normal.tscn" id="2_qnb4k"]
 [ext_resource type="Material" uid="uid://bmeoewc6jqd47" path="res://Materials/Material_1.tres" id="4_mwqlu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvef6"]
@@ -59,8 +58,8 @@ points = PackedVector3Array(12.1702, 11.0709, -8.63479, 17.8037, 7.2724, -15.493
 [node name="Road" type="Area3D"]
 collision_mask = 2
 script = ExtResource("1_g6vth")
-FracturedResourceHigh = ExtResource("2_a0qrn")
-FracturedResourceLow = ExtResource("3_xhbgt")
+FracturedResourceHigh = ExtResource("2_qnb4k")
+FracturedResourceLow = ExtResource("2_qnb4k")
 
 [node name="Road2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.199876, 0.866262, -0.457865, 0.925713, -0.0138142, 0.377975, 0.3211, -0.4994, -0.804671, 0, 0, 0)

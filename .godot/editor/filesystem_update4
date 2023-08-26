@@ -37,3 +37,10 @@ res://GameObjects/BreakableProps/Building_A_Base_Fractured_High_AltColor_2.tscn
 res://GameObjects/BreakableProps/Building_A_Base_AltColor_2.tscn
 res://GameObjects/BreakableProps/Building_A_Base_Fractured_Low_AltColor_2.tscn
 res://GameObjects/MeteoriteBall.tscn
+res://GameObjects/BreakableProps/Road_Fractured_Normal.tscn
+res://Materials/Material_Tree1.tres
+res://GameObjects/SquashableProps/Tree2.tscn
+res://GameObjects/SquashableProps/Tree1.tscn
+res://Scripts/Squashable.gd
+res://Scripts/GameObjects/MeteoriteBall.gd
+res://GameObjects/GUI/FinalResults.tscn

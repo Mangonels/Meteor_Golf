@@ -1,5 +1,6 @@
-C:/Users/dylan/Desktop/LocalRepos/Meteor_Golf/WebHTMLBuild
+res://Scripts
 res://Materials
+C:/Users/dylan/Desktop/LocalRepos/Meteor_Golf/WebHTMLBuild
 res://GameObjects/BreakableProps
 res://
 res://UIStyles/MainMenu
@@ -9,4 +10,3 @@ res://UIStyles
 res://GameObjects
 res://Levels
 res://GameObjects/Particles
-res://Scripts

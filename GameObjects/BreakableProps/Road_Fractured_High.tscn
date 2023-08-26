@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://buqtk3rim7tbe"]
+[gd_scene load_steps=59 format=3 uid="uid://epsyic888gey"]
 
 [ext_resource type="Script" path="res://Scripts/FracturedMesh.gd" id="1_1awm8"]
 [ext_resource type="PackedScene" uid="uid://cjlfceogj7p64" path="res://RigidBody.tscn" id="2_s6xy4"]

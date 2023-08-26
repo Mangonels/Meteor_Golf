@@ -99,4 +99,6 @@ func do_impulse_self(impulseForce: float):
 	apply_central_impulse(directionVector * impulseForce)
 
 func do_downfall():
+	ImpactEffectsCooldown.stop()
+	
 	apply_central_impulse(Vector3.DOWN * DownfallImpulse)
