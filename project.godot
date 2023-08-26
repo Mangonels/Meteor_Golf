@@ -23,6 +23,10 @@ GameManager="*res://Scripts/GameManager.gd"
 
 window/stretch/mode="canvas_items"
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 move_left={

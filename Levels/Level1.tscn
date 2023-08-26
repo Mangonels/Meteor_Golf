@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bk35bpemgfmky"]
+[gd_scene load_steps=35 format=3 uid="uid://bk35bpemgfmky"]
 
 [ext_resource type="ArrayMesh" uid="uid://dkfvu4gfw0mrg" path="res://3DModels/ExportedMeshes/Terrain_lv1.obj" id="1_58d2q"]
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_e7uaf"]
@@ -6,8 +6,11 @@
 [ext_resource type="ArrayMesh" uid="uid://dqjy3yw70rfq2" path="res://3DModels/ExportedMeshes/FlagPole.obj" id="2_q82rq"]
 [ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="2_ria2r"]
 [ext_resource type="Script" path="res://Scripts/GUI/TeleporterArea.gd" id="3_6x123"]
+[ext_resource type="Material" uid="uid://lqcf12mdtwfv" path="res://Materials/Material_7.tres" id="3_pmr6g"]
 [ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://GameObjects/GUI/IngameMenu.tscn" id="3_vk57i"]
+[ext_resource type="ArrayMesh" uid="uid://c7fspc1br1t2q" path="res://3DModels/ExportedMeshes/Cloud1.obj" id="4_4tq3e"]
 [ext_resource type="PackedScene" uid="uid://bu2kie7r0xa63" path="res://GameObjects/HUD.tscn" id="4_8xbdw"]
+[ext_resource type="ArrayMesh" uid="uid://6xlthwywrfue" path="res://3DModels/ExportedMeshes/Cloud2.obj" id="5_70xsm"]
 [ext_resource type="PackedScene" uid="uid://n34k1oie6pb4" path="res://GameObjects/Goal.tscn" id="5_w2dl2"]
 [ext_resource type="PackedScene" uid="uid://b7g23gyss1868" path="res://GameObjects/GUI/FinalResults.tscn" id="7_yy3nl"]
 [ext_resource type="PackedScene" uid="uid://bn2bpjsehykf7" path="res://GameObjects/BreakableProps/Building_A_Base.tscn" id="11_d5ph7"]
@@ -62,7 +65,7 @@ vertex_color_use_as_albedo = true
 environment = SubResource("Environment_gtv8t")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(0.00306637, 0.954373, 0.298602, 0.778349, -0.189749, 0.598472, 0.627825, 0.230581, -0.743417, 0, 27.7108, 73.7212)
+transform = Transform3D(-0.0131803, 0.972198, 0.233789, -0.926031, -0.100073, 0.36394, 0.377218, -0.211699, 0.901604, 23.9543, 17.1298, -0.610377)
 light_energy = 0.5
 shadow_enabled = true
 
@@ -87,6 +90,60 @@ surface_material_override/0 = SubResource("StandardMaterial3D_2q8cy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.7267, 12.7824, -23.2933)
 material_override = SubResource("StandardMaterial3D_v00ky")
 mesh = ExtResource("2_q82rq")
+skeleton = NodePath("../../..")
+
+[node name="Cloud1" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.8933, 27.8258, 13.643)
+material_override = ExtResource("3_pmr6g")
+mesh = ExtResource("4_4tq3e")
+skeleton = NodePath("../../..")
+
+[node name="Cloud5" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -55.3948, 27.8258, -29.7893)
+material_override = ExtResource("3_pmr6g")
+mesh = ExtResource("4_4tq3e")
+skeleton = NodePath("../../..")
+
+[node name="Cloud2" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -14.0155, 27.8258, -62.328)
+material_override = ExtResource("3_pmr6g")
+mesh = ExtResource("4_4tq3e")
+skeleton = NodePath("../../..")
+
+[node name="Cloud3" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
+transform = Transform3D(-1.2017e-07, 0, 2.74916, 0, 2.74916, 0, -2.74916, 0, -1.2017e-07, 36.6055, 27.8258, -40.8247)
+material_override = ExtResource("3_pmr6g")
+mesh = ExtResource("4_4tq3e")
+skeleton = NodePath("../../..")
+
+[node name="Cloud4" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
+transform = Transform3D(0.0932718, 0, 2.24412, 0, 2.24606, 0, -2.24412, 0, 0.0932718, -68.398, 40.2219, -7.39247)
+material_override = ExtResource("3_pmr6g")
+mesh = ExtResource("5_70xsm")
+skeleton = NodePath("../../..")
+
+[node name="Cloud6" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
+transform = Transform3D(-0.0773735, 0, -1.31514, 0, 1.31741, 0, 1.31514, 0, -0.0773735, 58.0686, 40.2219, -7.39247)
+material_override = ExtResource("3_pmr6g")
+mesh = ExtResource("5_70xsm")
+skeleton = NodePath("../../..")
+
+[node name="Cloud9" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
+transform = Transform3D(-1.87785, 0, 0.11048, 0, 1.8811, 0, -0.11048, 0, -1.87785, 135.171, 29.523, -21.5826)
+material_override = ExtResource("3_pmr6g")
+mesh = ExtResource("5_70xsm")
+skeleton = NodePath("../../..")
+
+[node name="Cloud7" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
+transform = Transform3D(-0.123296, 0, -2.0957, 0, 2.09933, 0, 2.0957, 0, -0.123296, -31.7977, 33.7253, 80.3747)
+material_override = ExtResource("3_pmr6g")
+mesh = ExtResource("5_70xsm")
+skeleton = NodePath("../../..")
+
+[node name="Cloud8" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
+transform = Transform3D(-0.123296, 0, -2.0957, 0, 2.09933, 0, 2.0957, 0, -0.123296, -74.4133, 40.2219, -118.091)
+material_override = ExtResource("3_pmr6g")
+mesh = ExtResource("5_70xsm")
 skeleton = NodePath("../../..")
 
 [node name="Breakables" type="Node" parent="Environment/Lv1_Layout"]
