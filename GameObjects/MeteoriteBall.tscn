@@ -26,26 +26,32 @@ mesh = ExtResource("2_cldt3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.755426, 3.35243, 0.663752, 2.13235, 0.0688481, -2.77459, -2.67066, 1.00324, -2.02758, 0.0702209, 0.116529, -0.0184078)
+visible = false
 shape = SubResource("CapsuleShape3D_jbnof")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.91507, 0, 0, 0, 1.91507, 0, 0, 0, 1.91507, 1.22237, 1.12558, 0.2865)
+visible = false
 shape = SubResource("SphereShape3D_uc5ph")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.14668, 0, 0, 0, 1.14668, 0, 0, 0, 1.14668, -1.48671, 1.3026, -0.491026)
+visible = false
 shape = SubResource("SphereShape3D_uc5ph")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
 transform = Transform3D(2.14622, 0, 0, 0, 2.14622, 0, 0, 0, 2.14622, 0.443425, -0.39136, -0.834591)
+visible = false
 shape = SubResource("SphereShape3D_uc5ph")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.55428, 0, 0, 0, 1.55428, 0, 0, 0, 1.55428, -0.229182, -0.700186, 1.11309)
+visible = false
 shape = SubResource("SphereShape3D_uc5ph")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.56249, 0, 0, 0, 1.56249, 0, 0, 0, 1.56249, 1.51021, -0.802307, 0.44906)
+visible = false
 shape = SubResource("SphereShape3D_uc5ph")
 
 [node name="CPU3D_Puff" parent="." instance=ExtResource("3_7jg2p")]

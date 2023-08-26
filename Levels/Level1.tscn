@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bk35bpemgfmky"]
+[gd_scene load_steps=48 format=3 uid="uid://bk35bpemgfmky"]
 
 [ext_resource type="ArrayMesh" uid="uid://dkfvu4gfw0mrg" path="res://3DModels/ExportedMeshes/Terrain_lv1.obj" id="1_58d2q"]
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_e7uaf"]
@@ -30,6 +30,8 @@
 [ext_resource type="ArrayMesh" uid="uid://kn3kqbjfh23q" path="res://3DModels/ExportedMeshes/Rock2.obj" id="27_g3iru"]
 [ext_resource type="PackedScene" uid="uid://27020gb7qb2h" path="res://GameObjects/SquashableProps/Tree1.tscn" id="29_84tdx"]
 [ext_resource type="PackedScene" uid="uid://cmyw0ugpewiw4" path="res://GameObjects/SquashableProps/Tree2.tscn" id="30_hsb7d"]
+[ext_resource type="PackedScene" uid="uid://brb3cxiqcdv6r" path="res://GameObjects/SquashableProps/Parasol1.tscn" id="31_s0e7c"]
+[ext_resource type="PackedScene" uid="uid://bo5oo7b3waox4" path="res://GameObjects/SquashableProps/Parasol2.tscn" id="32_mp4gq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q0ifl"]
 sky_top_color = Color(0.243137, 0.4, 0.886275, 1)
@@ -75,6 +77,11 @@ data = PackedVector3Array(-0.0739, 3.4662, -2.6964, 0.4379, 0.1559, -3.6758, 1.3
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_iodh0"]
 data = PackedVector3Array(-0.0739, 3.4662, -2.6964, 0.4379, 0.1559, -3.6758, 1.3669, 3.9703, -2.0839, 1.3669, 3.9703, -2.0839, 0.4379, 0.1559, -3.6758, 2.334, 0.2253, -2.933, 0.4379, 0.1559, -3.6758, 0.3972, -3.8871, -2.5691, 2.334, 0.2253, -2.933, 2.334, 0.2253, -2.933, 0.3972, -3.8871, -2.5691, 1.7749, -4.0849, -2.0832, -0.1056, 5.3784, -0.5462, -0.0739, 3.4662, -2.6964, 1.3669, 3.9703, -2.0839, 1.7749, -4.0849, -2.0832, -0.068, -7.0251, 0.3235, 2.1601, -3.9614, -0.5534, 2.3646, 0.867, 2.6157, 1.2981, -3.6297, 1.5508, 0.2944, 1.0582, 4.0408, 0.2944, 1.0582, 4.0408, 1.2981, -3.6297, 1.5508, -0.1921, -3.8502, 2.7372, -0.1056, 5.3784, -0.5462, 1.9079, 4.0294, -0.6337, 1.4468, 4.781, 1.4533, 2.1601, -3.9614, -0.5534, -0.068, -7.0251, 0.3235, 1.2981, -3.6297, 1.5508, 1.4468, 4.781, 1.4533, 2.3646, 0.867, 2.6157, 0.2605, 4.7956, 2.0138, 0.2605, 4.7956, 2.0138, 2.3646, 0.867, 2.6157, 0.2944, 1.0582, 4.0408, 0.2944, 1.0582, 4.0408, -0.1921, -3.8502, 2.7372, -1.9168, 0.7262, 3.1663, -1.9168, 0.7262, 3.1663, -0.1921, -3.8502, 2.7372, -1.7281, -4.7296, 1.605, -0.1056, 5.3784, -0.5462, 0.2605, 4.7956, 2.0138, -1.4211, 4.5209, 1.9689, -0.1921, -3.8502, 2.7372, -0.068, -7.0251, 0.3235, -1.7281, -4.7296, 1.605, 0.2605, 4.7956, 2.0138, 0.2944, 1.0582, 4.0408, -1.4211, 4.5209, 1.9689, -1.4211, 4.5209, 1.9689, 0.2944, 1.0582, 4.0408, -1.9168, 0.7262, 3.1663, -2.3488, 3.6337, 0.1956, -3.396, 0.1306, 0.2936, -1.3461, 3.6774, -2.0194, -1.3461, 3.6774, -2.0194, -3.396, 0.1306, 0.2936, -2.2636, 0.0585, -2.0491, -3.396, 0.1306, 0.2936, -2.5737, -3.6853, 0.0062, -2.2636, 0.0585, -2.0491, -2.2636, 0.0585, -2.0491, -2.5737, -3.6853, 0.0062, -1.5902, -3.618, -1.6529, -0.1056, 5.3784, -0.5462, -2.3488, 3.6337, 0.1956, -1.3461, 3.6774, -2.0194, -2.5737, -3.6853, 0.0062, -0.068, -7.0251, 0.3235, -1.5902, -3.618, -1.6529, 1.9079, 4.0294, -0.6337, 3.2527, 0.395, -0.3221, 1.4468, 4.781, 1.4533, 1.4468, 4.781, 1.4533, 3.2527, 0.395, -0.3221, 2.3646, 0.867, 2.6157, 3.2527, 0.395, -0.3221, 2.1601, -3.9614, -0.5534, 2.3646, 0.867, 2.6157, 2.3646, 0.867, 2.6157, 2.1601, -3.9614, -0.5534, 1.2981, -3.6297, 1.5508, -0.1056, 5.3784, -0.5462, 1.4468, 4.781, 1.4533, 0.2605, 4.7956, 2.0138, -0.1921, -3.8502, 2.7372, 1.2981, -3.6297, 1.5508, -0.068, -7.0251, 0.3235, -0.1056, 5.3784, -0.5462, 1.3669, 3.9703, -2.0839, 1.9079, 4.0294, -0.6337, -0.068, -7.0251, 0.3235, 1.7749, -4.0849, -2.0832, 0.3972, -3.8871, -2.5691, 1.3669, 3.9703, -2.0839, 2.334, 0.2253, -2.933, 1.9079, 4.0294, -0.6337, 1.9079, 4.0294, -0.6337, 2.334, 0.2253, -2.933, 3.2527, 0.395, -0.3221, 2.334, 0.2253, -2.933, 1.7749, -4.0849, -2.0832, 3.2527, 0.395, -0.3221, 3.2527, 0.395, -0.3221, 1.7749, -4.0849, -2.0832, 2.1601, -3.9614, -0.5534, -2.2636, 0.0585, -2.0491, -1.5902, -3.618, -1.6529, 0.4379, 0.1559, -3.6758, 0.4379, 0.1559, -3.6758, -1.5902, -3.618, -1.6529, 0.3972, -3.8871, -2.5691, -0.1056, 5.3784, -0.5462, -1.3461, 3.6774, -2.0194, -0.0739, 3.4662, -2.6964, 0.3972, -3.8871, -2.5691, -1.5902, -3.618, -1.6529, -0.068, -7.0251, 0.3235, -1.3461, 3.6774, -2.0194, -2.2636, 0.0585, -2.0491, -0.0739, 3.4662, -2.6964, -0.0739, 3.4662, -2.6964, -2.2636, 0.0585, -2.0491, 0.4379, 0.1559, -3.6758, -0.1056, 5.3784, -0.5462, -1.4211, 4.5209, 1.9689, -2.3488, 3.6337, 0.1956, -2.5737, -3.6853, 0.0062, -1.7281, -4.7296, 1.605, -0.068, -7.0251, 0.3235, -1.4211, 4.5209, 1.9689, -1.9168, 0.7262, 3.1663, -2.3488, 3.6337, 0.1956, -2.3488, 3.6337, 0.1956, -1.9168, 0.7262, 3.1663, -3.396, 0.1306, 0.2936, -1.9168, 0.7262, 3.1663, -1.7281, -4.7296, 1.605, -3.396, 0.1306, 0.2936, -3.396, 0.1306, 0.2936, -1.7281, -4.7296, 1.605, -2.5737, -3.6853, 0.0062)
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_u7n0t"]
+size = Vector2(100, 100)
+subdivide_width = 50
+subdivide_depth = 50
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_5djom"]
 
 [node name="Level" type="Node3D"]
@@ -85,7 +92,7 @@ data = PackedVector3Array(-0.0739, 3.4662, -2.6964, 0.4379, 0.1559, -3.6758, 1.3
 environment = SubResource("Environment_gtv8t")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(-0.0131803, 0.972198, 0.233789, -0.926031, -0.100073, 0.36394, 0.377218, -0.211699, 0.901604, 23.9543, 17.1298, -0.610377)
+transform = Transform3D(-0.0131803, 0.972198, 0.233789, -0.926031, -0.100073, 0.36394, 0.377218, -0.211699, 0.901604, 23.9543, 39.437, -0.610377)
 light_energy = 0.5
 shadow_enabled = true
 
@@ -138,7 +145,7 @@ mesh = ExtResource("4_4tq3e")
 skeleton = NodePath("../../..")
 
 [node name="Cloud4" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
-transform = Transform3D(0.0932718, 0, 2.24412, 0, 2.24606, 0, -2.24412, 0, 0.0932718, -68.398, 40.2219, -7.39247)
+transform = Transform3D(2.13419, 0, -0.699996, 0, 2.24606, 0, 0.699996, 0, 2.13419, -68.398, 32.8949, -7.39247)
 material_override = ExtResource("3_pmr6g")
 mesh = ExtResource("5_70xsm")
 skeleton = NodePath("../../..")
@@ -185,6 +192,7 @@ mesh = ExtResource("26_ula6q")
 skeleton = NodePath("../../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Lv1_Layout/Rock3"]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Lv1_Layout/Rock3/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ivuyn")
@@ -196,6 +204,7 @@ mesh = ExtResource("26_ula6q")
 skeleton = NodePath("../../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Lv1_Layout/Rock4"]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Lv1_Layout/Rock4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_wsbkx")
@@ -207,6 +216,7 @@ mesh = ExtResource("27_g3iru")
 skeleton = NodePath("../../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Lv1_Layout/Rock2"]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Lv1_Layout/Rock2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_woi78")
@@ -218,6 +228,7 @@ mesh = ExtResource("27_g3iru")
 skeleton = NodePath("../../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Environment/Lv1_Layout/Rock5"]
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Lv1_Layout/Rock5/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_iodh0")
@@ -382,10 +393,15 @@ transform = Transform3D(1.00123, 0, -1.01424, 0, 1.42518, 0, 1.01424, 0, 1.00123
 [node name="Tree23" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("30_hsb7d")]
 transform = Transform3D(-1.12583, 0, -0.65, 0, 1.3, 0, 0.65, 0, -1.12583, 7.6799, 7.8714, 4.8233)
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Lv1_Layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4706, 5.40808, 4.49259)
+mesh = SubResource("PlaneMesh_u7n0t")
+
 [node name="Bounds" type="Node" parent="."]
 
 [node name="TeleporterArea" type="Area3D" parent="Bounds" node_paths=PackedStringArray("TeleportTarget")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 31.0495, 48.0527)
+visible = false
 collision_mask = 2
 script = ExtResource("3_6x123")
 TeleportTarget = NodePath("../../SpawnPoint")
@@ -396,6 +412,7 @@ shape = SubResource("BoxShape3D_5djom")
 
 [node name="TeleporterArea2" type="Area3D" parent="Bounds" node_paths=PackedStringArray("TeleportTarget")]
 transform = Transform3D(-3.28203e-08, 0, -1, 0, 1, 0, 0.75084, 0, -4.37114e-08, -48.7391, 31.0495, 31.3146)
+visible = false
 collision_mask = 2
 script = ExtResource("3_6x123")
 TeleportTarget = NodePath("../../SpawnPoint")
@@ -425,6 +442,24 @@ transform = Transform3D(1.38231, 0, 0, 0, 1.38231, 0, 0, 0, 1.38231, -27.2884, 9
 [node name="HUD" parent="." instance=ExtResource("4_8xbdw")]
 
 [node name="IngameMenu" parent="." instance=ExtResource("3_vk57i")]
+
+[node name="Parasol1" parent="." instance=ExtResource("31_s0e7c")]
+transform = Transform3D(0.999602, -0.0282182, 0, 0.0282182, 0.999602, 0, 0, 0, 1, 33.0225, 5.62662, -0.380994)
+
+[node name="Parasol4" parent="." instance=ExtResource("31_s0e7c")]
+transform = Transform3D(0.95449, 0.298241, 0, -0.298241, 0.95449, 0, 0, 0, 1, 37.444, 5.90071, 11.409)
+
+[node name="Parasol2" parent="." instance=ExtResource("32_mp4gq")]
+transform = Transform3D(0.960016, 0.279946, 0, -0.279946, 0.960016, 0, 0, 0, 1, 32.8079, 5.94715, 1.71541)
+
+[node name="Parasol3" parent="." instance=ExtResource("32_mp4gq")]
+transform = Transform3D(0.960016, 0.279946, 0, -0.279946, 0.960016, 0, 0, 0, 1, 30.4265, 5.96408, -4.09749)
+
+[node name="Parasol5" parent="." instance=ExtResource("31_s0e7c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.6056, 6.08809, 13.5969)
+
+[node name="Parasol6" parent="." instance=ExtResource("32_mp4gq")]
+transform = Transform3D(0.996101, 0.0866727, 0.0164303, -0.0882163, 0.978672, 0.185524, 0, -0.18625, 0.982502, 40.7631, 5.6812, 18.4974)
 
 [connection signal="body_entered" from="Bounds/TeleporterArea" to="Bounds/TeleporterArea" method="on_body_entered" flags=18]
 [connection signal="body_entered" from="Bounds/TeleporterArea2" to="Bounds/TeleporterArea2" method="on_body_entered" flags=18]

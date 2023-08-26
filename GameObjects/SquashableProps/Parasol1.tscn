@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://brb3cxiqcdv6r"]
+
+[ext_resource type="Script" path="res://Scripts/Squashable.gd" id="1_5b101"]
+[ext_resource type="Material" uid="uid://b1ccb0kkimcrq" path="res://Materials/Material_VertexPaint_GLOBAL.tres" id="2_6okts"]
+[ext_resource type="ArrayMesh" uid="uid://cmbtqhibs7kar" path="res://3DModels/BlenderFiles/Parasol1.obj" id="4_178er"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oyrhr"]
+
+[node name="Parasol1" type="Area3D"]
+collision_mask = 2
+script = ExtResource("1_5b101")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.664028, 0)
+shape = SubResource("BoxShape3D_oyrhr")
+
+[node name="Parasol1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0163955, 0, 0, 0, 0.0163955, 0, 0, 0, 0.0163955, 0, 0, 0)
+material_override = ExtResource("2_6okts")
+mesh = ExtResource("4_178er")
+
+[connection signal="body_entered" from="." to="." method="on_body_entered"]

@@ -70,7 +70,7 @@ func add_stroke():
 func get_strokes():
 	return CurrentStrokes
 
-func add_destruction_points(destruction: int):
+func add_destruction_points(destruction: float):
 	Destruction += destruction
 
 func reset_game_status():
