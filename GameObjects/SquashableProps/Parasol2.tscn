@@ -17,6 +17,7 @@ mesh = ExtResource("3_otro6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.664028, 0)
+visible = false
 shape = SubResource("BoxShape3D_oyrhr")
 
 [connection signal="body_entered" from="." to="." method="on_body_entered"]

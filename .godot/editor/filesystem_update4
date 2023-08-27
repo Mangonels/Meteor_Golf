@@ -47,3 +47,5 @@ res://GameObjects/GUI/FinalResults.tscn
 res://Scripts/GameManager.gd
 res://GameObjects/SquashableProps/Parasol1.tscn
 res://GameObjects/SquashableProps/Parasol2.tscn
+res://Scripts/Water.gdshader
+res://Materials/Material_3.tres

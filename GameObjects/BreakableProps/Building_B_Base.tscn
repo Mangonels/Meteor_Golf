@@ -2,11 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/FracturedModelReplacer.gd" id="1_qwi4v"]
 [ext_resource type="PackedScene" uid="uid://c2s7bgr150egw" path="res://GameObjects/BreakableProps/Building_B_Base_Fractured_Low.tscn" id="2_kyskb"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_10n2v"]
-albedo_color = Color(0.435294, 0.886275, 0.984314, 1)
-metallic = 0.58
-metallic_specular = 1.0
+[ext_resource type="Material" uid="uid://c4ucel7l0hy3u" path="res://Materials/Material_2.tres" id="3_appf5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2uas0"]
 
@@ -48,7 +44,7 @@ FracturedResourceLow = ExtResource("2_kyskb")
 
 [node name="Building_B_Base2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0877208, 0, 0, 0, -0.997455, 1.32455e-08, 0, -1.50611e-07, -0.0877208, 0, 1.00489, 0)
-material_override = SubResource("StandardMaterial3D_10n2v")
+material_override = ExtResource("3_appf5")
 mesh = SubResource("ArrayMesh_f6q25")
 skeleton = NodePath("")
 

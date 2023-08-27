@@ -12,6 +12,7 @@ script = ExtResource("1_5b101")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0.664028, 0)
+visible = false
 shape = SubResource("BoxShape3D_oyrhr")
 
 [node name="Parasol1" type="MeshInstance3D" parent="."]
