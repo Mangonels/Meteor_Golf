@@ -1,8 +1,9 @@
+AnimationPlayer
+Timer
 MeshInstance3D
 Node
 CollisionShape3D
 Area3D
-Timer
 RigidBody3D
 Node3D
 Camera3D
@@ -18,7 +19,6 @@ Button
 CPUParticles3D
 CPUParticles2D
 MultiMeshInstance3D
-AnimationPlayer
 GPUParticles3D
 StaticBody3D
 LinkButton

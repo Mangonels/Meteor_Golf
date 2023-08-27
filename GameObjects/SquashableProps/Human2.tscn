@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://bpdroeh7i4e8f"]
+
+[ext_resource type="Script" path="res://Scripts/Squashable.gd" id="1_phvvi"]
+[ext_resource type="ArrayMesh" uid="uid://csrktkbs0eu5o" path="res://3DModels/ExportedMeshes/SquashableProps/Human2.obj" id="2_q3n8u"]
+[ext_resource type="Material" uid="uid://bv856fdxe0psl" path="res://Materials/Material_8.tres" id="2_y45xc"]
+[ext_resource type="Script" path="res://Scripts/HumanAnimationTimerScript.gd" id="4_q4g3s"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vroh8"]
+size = Vector3(0.885353, 1, 1)
+
+[sub_resource type="Animation" id="Animation_mssc8"]
+resource_name = "Human_Animation"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Human2")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.246, 0, 0.2, 1, 0, 0.346, 0, 0.4, 1, 0, 0.246, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wyxk6"]
+_data = {
+"Human_Animation": SubResource("Animation_mssc8")
+}
+
+[node name="Human2" type="Area3D"]
+collision_mask = 2
+script = ExtResource("1_phvvi")
+CasualtyPoints = 1.0
+
+[node name="Human2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0.246, 0)
+material_override = ExtResource("2_y45xc")
+mesh = ExtResource("2_q3n8u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.213, 0)
+visible = false
+shape = SubResource("BoxShape3D_vroh8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wyxk6")
+}
+
+[node name="Timer" type="Timer" parent="." node_paths=PackedStringArray("TheAnimationPlayer")]
+script = ExtResource("4_q4g3s")
+TheAnimationPlayer = NodePath("../AnimationPlayer")
+
+[connection signal="body_entered" from="." to="." method="on_body_entered"]
+[connection signal="timeout" from="Timer" to="Timer" method="on_timer_timeout"]

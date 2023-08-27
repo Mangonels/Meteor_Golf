@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cp4n3jdxcs7pd"
-path="res://.godot/imported/Tree2.blend-94f2c03cf7b47825ac0dea243ed27181.scn"
+uid="uid://c72u3cywo42v4"
+path="res://.godot/imported/Human.blend-f16a0d20010f8e1a5f109022025a8056.scn"
 
 [deps]
 
-source_file="res://3DModels/BlenderFiles/Tree2.blend"
-dest_files=["res://.godot/imported/Tree2.blend-94f2c03cf7b47825ac0dea243ed27181.scn"]
+source_file="res://3DModels/BlenderFiles/SquashableProps/Human.blend"
+dest_files=["res://.godot/imported/Human.blend-f16a0d20010f8e1a5f109022025a8056.scn"]
 
 [params]
 

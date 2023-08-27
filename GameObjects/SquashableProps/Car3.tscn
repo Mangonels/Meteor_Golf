@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnlkb0mr5j7ov"]
+
+[ext_resource type="Script" path="res://Scripts/Squashable.gd" id="1_eb3jl"]
+[ext_resource type="Material" uid="uid://b1ccb0kkimcrq" path="res://Materials/Material_VertexPaint_GLOBAL.tres" id="2_q1s5k"]
+[ext_resource type="ArrayMesh" uid="uid://cg7ymu3usrnn3" path="res://3DModels/ExportedMeshes/SquashableProps/Car3.obj" id="4_r5lub"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vroh8"]
+size = Vector3(0.885353, 1, 1)
+
+[node name="Car3" type="Area3D"]
+collision_mask = 2
+script = ExtResource("1_eb3jl")
+DestructionPoints = 0.2
+CasualtyPoints = 1.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.796027, 0, 0, 0, 0.320215, 0, 0, 0, 0.353008, -0.0566342, 0.181, 0)
+visible = false
+shape = SubResource("BoxShape3D_vroh8")
+
+[node name="Car3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.221, 0)
+material_override = ExtResource("2_q1s5k")
+mesh = ExtResource("4_r5lub")
+
+[connection signal="body_entered" from="." to="." method="on_body_entered"]

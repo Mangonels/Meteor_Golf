@@ -6,7 +6,7 @@ func _ready():
 	Input.mouse_mode = 2
 	hide()
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("toggle_menu"):
 		if is_visible():
 			Input.mouse_mode = 2

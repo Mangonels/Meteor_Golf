@@ -4,7 +4,7 @@ extends Area3D
 @export var FracturedResourceLow: Resource
 @export var DestructionPoints = 1
 
-func on_body_entered(body: Node):
+func on_body_entered(_body: Node):
 	var fracturedModel
 	if OS.has_feature("windows"):
 		fracturedModel = FracturedResourceHigh.instantiate()

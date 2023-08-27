@@ -13,7 +13,7 @@ func _set_mat(_value):
 	for shard in $Shards.get_children():
 		shard.get_child(0).set_surface_override_material(0, load(set_material_load_dir))
 
-func _process(delta):
+func _process(_delta):
 	if Engine.is_editor_hint():
 		if Input.is_key_pressed(KEY_P):
 			print("on")

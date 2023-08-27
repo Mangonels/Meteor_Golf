@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckehvk7yswbeq"]
+
+[ext_resource type="Script" path="res://Scripts/Squashable.gd" id="1_5jafj"]
+[ext_resource type="Material" uid="uid://bv856fdxe0psl" path="res://Materials/Material_8.tres" id="2_h756u"]
+[ext_resource type="ArrayMesh" uid="uid://b5capuakvgbn0" path="res://3DModels/ExportedMeshes/SquashableProps/Human3.obj" id="5_l2rgo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vroh8"]
+size = Vector3(0.885353, 1, 1)
+
+[node name="Human1" type="Area3D"]
+collision_mask = 2
+script = ExtResource("1_5jafj")
+CasualtyPoints = 1.0
+
+[node name="Human3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0.246, 0)
+material_override = ExtResource("2_h756u")
+mesh = ExtResource("5_l2rgo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.213, 0)
+visible = false
+shape = SubResource("BoxShape3D_vroh8")
+
+[connection signal="body_entered" from="." to="." method="on_body_entered"]

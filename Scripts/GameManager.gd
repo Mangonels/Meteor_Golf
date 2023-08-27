@@ -73,6 +73,9 @@ func get_strokes():
 func add_destruction_points(destruction: float):
 	Destruction += destruction
 
+func add_casualty_points(casualties: float):
+	Casualties += casualties
+
 func reset_game_status():
 	CurrentStrokes = 0
 	MechanicsLocked = false
