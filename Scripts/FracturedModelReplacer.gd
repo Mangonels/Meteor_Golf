@@ -1,15 +1,18 @@
 extends Area3D
 
-@export var FracturedResourceHigh: Resource
-@export var FracturedResourceLow: Resource
+@export var HighFracturedResource: PackedScene
+@export var LowFracturedResource: PackedScene
+
+@export var RemoveNodeTrees: Array[Node3D]
+
 @export var DestructionPoints = 1
 
 func on_body_entered(_body: Node):
 	var fracturedModel
 	if OS.has_feature("windows"):
-		fracturedModel = FracturedResourceHigh.instantiate()
+		fracturedModel = HighFracturedResource.instantiate()
 	elif OS.has_feature("web"):
-		fracturedModel = FracturedResourceLow.instantiate()
+		fracturedModel = LowFracturedResource.instantiate()
 
 	self.get_parent().add_child(fracturedModel)
 	
@@ -18,5 +21,9 @@ func on_body_entered(_body: Node):
 	fracturedModel.scale = self.scale
 	
 	GameManager.add_destruction_points(DestructionPoints)
+
+	for node in RemoveNodeTrees:
+		if node is Node:
+			node.queue_free()
 
 	self.queue_free()

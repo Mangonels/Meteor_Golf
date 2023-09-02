@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dbi2eghijdkcc"]
+[gd_scene load_steps=9 format=3 uid="uid://dbi2eghijdkcc"]
 
 [ext_resource type="Script" path="res://Scripts/FracturedModelReplacer.gd" id="1_qwi4v"]
-[ext_resource type="PackedScene" uid="uid://c2s7bgr150egw" path="res://GameObjects/BreakableProps/Building_B_Base_Fractured_Low.tscn" id="2_kyskb"]
+[ext_resource type="PackedScene" uid="uid://c2s7bgr150egw" path="res://GameObjects/BreakableProps/Building_B_Base_Fractured_High.tscn" id="2_4h1pw"]
 [ext_resource type="Material" uid="uid://c4ucel7l0hy3u" path="res://Materials/Material_2.tres" id="3_appf5"]
+[ext_resource type="PackedScene" uid="uid://dy1ms4netfnkp" path="res://GameObjects/BreakableProps/Building_B_Base_Fractured_Low.tscn" id="3_d0a0u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2uas0"]
 
@@ -33,14 +34,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5loea")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b2px5"]
-points = PackedVector3Array(-11.3998, -1.0018, -11.3998, -11.3998, -1.0018, 11.3998, -11.3998, 1.00331, -11.3998, 11.3976, -1.0018, -11.3998, -11.3998, 1.00331, 11.3998, 11.3976, -1.0018, 11.3998, 11.3976, 1.00331, -11.3998, 11.3998, 0.155221, 11.3016, 11.3976, 1.00331, 11.3998)
+[sub_resource type="BoxShape3D" id="BoxShape3D_fxw8s"]
 
 [node name="Building_B_Base" type="Area3D"]
 collision_mask = 2
 script = ExtResource("1_qwi4v")
-FracturedResourceHigh = ExtResource("2_kyskb")
-FracturedResourceLow = ExtResource("2_kyskb")
+HighFracturedResource = ExtResource("2_4h1pw")
+LowFracturedResource = ExtResource("3_d0a0u")
 
 [node name="Building_B_Base2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0877208, 0, 0, 0, -0.997455, 1.32455e-08, 0, -1.50611e-07, -0.0877208, 0, 1.00489, 0)
@@ -49,7 +49,7 @@ mesh = SubResource("ArrayMesh_f6q25")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.0877208, 0, 0, 0, -0.997455, 1.32455e-08, 0, -1.50611e-07, -0.0877208, 0, 1.00489, 0)
-shape = SubResource("ConvexPolygonShape3D_b2px5")
+transform = Transform3D(2.04, 0, 0, 0, 2.04, 0, 0, 0, 2.04, 0, 1.00616, 0)
+shape = SubResource("BoxShape3D_fxw8s")
 
 [connection signal="body_entered" from="." to="." method="on_body_entered"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://d2vbutxrhkhqm"]
 
 [ext_resource type="Script" path="res://Scripts/FracturedModelReplacer.gd" id="1_hjf0l"]
-[ext_resource type="PackedScene" uid="uid://btbv4b56j74bi" path="res://GameObjects/BreakableProps/Building_Top_Fractured_Normal_AltColor_2.tscn" id="2_e7imd"]
+[ext_resource type="PackedScene" uid="uid://btbv4b56j74bi" path="res://GameObjects/BreakableProps/Building_Top_Fractured_Normal_AltColor_2.tscn" id="2_ektj6"]
 [ext_resource type="Material" uid="uid://d2w0ni6m27mw3" path="res://Materials/Material_6.tres" id="3_56sfr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b0dhy"]
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_t22m2"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_7c0dw"]
 _surfaces = [{
 "aabb": AABB(-1, -1, -1, 2, 2, 2.00001),
 "format": 4097,
@@ -31,7 +31,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 255, 127, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 255, 127, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 63, 255, 127, 255, 127, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 255, 127, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 255, 127, 255, 127, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 63, 255, 127, 255, 255, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 255, 127, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 255, 127, 0, 0, 0, 0, 128, 191, 0, 0, 128, 191, 0, 0, 128, 191, 255, 255, 255, 255, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 255, 127, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 255, 255, 255, 255, 0, 0, 128, 191, 0, 0, 128, 63, 0, 0, 128, 191, 255, 127, 255, 255, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 255, 127, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 255, 127, 255, 127, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 63, 255, 255, 255, 127, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 255, 127, 255, 127, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 255, 127, 255, 255, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 63, 255, 255, 255, 127, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 255, 127, 0, 0, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 255, 255, 255, 255, 0, 0, 128, 63, 0, 0, 128, 191, 0, 0, 128, 191, 255, 255, 255, 127, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 255, 255, 255, 255, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 255, 127, 255, 255, 0, 0, 128, 63, 0, 0, 128, 63, 0, 0, 128, 191, 255, 255, 255, 127)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_t22m2")
+shadow_mesh = SubResource("ArrayMesh_7c0dw")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8b828"]
 points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1)
@@ -39,8 +39,8 @@ points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1
 [node name="Building_Top_AltColor_2" type="Area3D"]
 collision_mask = 2
 script = ExtResource("1_hjf0l")
-FracturedResourceHigh = ExtResource("2_e7imd")
-FracturedResourceLow = ExtResource("2_e7imd")
+HighFracturedResource = ExtResource("2_ektj6")
+LowFracturedResource = ExtResource("2_ektj6")
 
 [node name="Building_Top2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.12631, 0, 0, 0, 0.101636, 0, 0, 0, 1.12631, 0.00389242, 0.122355, 0)

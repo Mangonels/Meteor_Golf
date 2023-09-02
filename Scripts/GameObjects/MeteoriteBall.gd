@@ -4,6 +4,8 @@ extends RigidBody3D
 @onready var DirectionalPivotHeightRegulator: Node = get_tree().get_root().get_node("Level/SwingDirectionPivot/HeightRegulator")
 @onready var OrbitalFollowCamera: Node = get_tree().get_root().get_node("Level/OrbitalFollowCamera")
 
+@export var ImpactEffectResource: PackedScene
+
 @export var DownfallImpulse = 60.0
 @export var ImpactEffectsCooldown: Timer = null
 @export var UseRespawnUnderHeight = true
@@ -64,7 +66,7 @@ func _integrate_forces(state):
 
 #Meteorite high velocity impact VFX
 func spawn_impact_effect(collisionPoint: Vector3, collisionNormal: Vector3):
-	var impactEffectInstance = load("res://GameObjects/VFX/ImpactExpansionEffect.tscn").instantiate()
+	var impactEffectInstance = ImpactEffectResource.instantiate()
 
 	#Set position
 	impactEffectInstance.transform.origin = collisionPoint

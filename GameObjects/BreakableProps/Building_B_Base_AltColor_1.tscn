@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1medyduwqsuo"]
+[gd_scene load_steps=9 format=3 uid="uid://b1medyduwqsuo"]
 
 [ext_resource type="Script" path="res://Scripts/FracturedModelReplacer.gd" id="1_cti3v"]
-[ext_resource type="PackedScene" uid="uid://bmhjbc6n2jv25" path="res://GameObjects/BreakableProps/Building_B_Base_Fractured_Low_AltColor_1.tscn" id="2_1wg6i"]
+[ext_resource type="PackedScene" uid="uid://bmhjbc6n2jv25" path="res://GameObjects/BreakableProps/Building_B_Base_Fractured_High_AltColor_1.tscn" id="2_3d4sl"]
+[ext_resource type="PackedScene" uid="uid://b4xsftmbvbe3w" path="res://GameObjects/BreakableProps/Building_B_Base_Fractured_Low_AltColor_1.tscn" id="3_ifvbg"]
 [ext_resource type="Material" uid="uid://chbt5axjyhrin" path="res://Materials/Material_4.tres" id="3_kb6gl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tvmcn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2uas0"]
 
@@ -33,23 +36,20 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_5loea")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b2px5"]
-points = PackedVector3Array(-11.3998, -1.0018, -11.3998, -11.3998, -1.0018, 11.3998, -11.3998, 1.00331, -11.3998, 11.3976, -1.0018, -11.3998, -11.3998, 1.00331, 11.3998, 11.3976, -1.0018, 11.3998, 11.3976, 1.00331, -11.3998, 11.3998, 0.155221, 11.3016, 11.3976, 1.00331, 11.3998)
-
 [node name="Building_B_Base_AltColor_1" type="Area3D"]
 collision_mask = 2
 script = ExtResource("1_cti3v")
-FracturedResourceHigh = ExtResource("2_1wg6i")
-FracturedResourceLow = ExtResource("2_1wg6i")
+HighFracturedResource = ExtResource("2_3d4sl")
+LowFracturedResource = ExtResource("3_ifvbg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(2.04, 0, 0, 0, 2.04, 0, 0, 0, 2.04, 0, 0.984471, 0)
+shape = SubResource("BoxShape3D_tvmcn")
 
 [node name="Building_B_Base2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.0877208, 0, 0, 0, -0.997455, 1.32455e-08, 0, -1.50611e-07, -0.0877208, 0, 1.00489, 0)
 material_override = ExtResource("3_kb6gl")
 mesh = SubResource("ArrayMesh_f6q25")
 skeleton = NodePath("")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.0877208, 0, 0, 0, -0.997455, 1.32455e-08, 0, -1.50611e-07, -0.0877208, 0, 1.00489, 0)
-shape = SubResource("ConvexPolygonShape3D_b2px5")
 
 [connection signal="body_entered" from="." to="." method="on_body_entered"]

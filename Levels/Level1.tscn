@@ -284,7 +284,8 @@ shape = SubResource("ConcavePolygonShape3D_iodh0")
 
 [node name="Breakables" type="Node" parent="Environment/Lv1_Layout"]
 
-[node name="Road" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("15_t4hb8")]
+[node name="Road" parent="Environment/Lv1_Layout/Breakables" node_paths=PackedStringArray("RemoveNodeTrees") instance=ExtResource("15_t4hb8")]
+RemoveNodeTrees = [NodePath("../../Squashables/Car4")]
 DestructionPoints = 2
 
 [node name="Building_A_Base" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("11_d5ph7")]
@@ -294,28 +295,28 @@ transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.6294, 7.32659, -4.67
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.6241, 8.71847, -4.67886)
 
 [node name="Building_Top" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("14_tqkxs")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.6429, 10.1171, -4.68092)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 13.6258, 10.0877, -4.68092)
 
 [node name="Building_A_Base3" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("11_d5ph7")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.5768, 7.66484, -8.65245)
 
 [node name="Building_A_F3" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("12_dg1wr")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.5715, 9.05672, -8.65476)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.5715, 9.05672, -8.65234)
 
 [node name="Building_Top3" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("14_tqkxs")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.5903, 10.4554, -8.65683)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.5903, 10.4305, -8.6529)
 
 [node name="Building_A_Base4" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("11_d5ph7")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.5958, 7.66965, -7.0716)
 
 [node name="Building_A_F4" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("12_dg1wr")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.5905, 9.06153, -7.07392)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.5905, 9.06153, -7.07182)
 
 [node name="Building_A_F5" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("12_dg1wr")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.5905, 10.4578, -7.07392)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.5905, 10.4578, -7.07149)
 
 [node name="Building_Top4" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("14_tqkxs")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.6093, 11.8576, -7.07598)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 21.6093, 11.8327, -7.07776)
 
 [node name="Building_B_Base" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("11_j2xtl")]
 transform = Transform3D(0.778727, 0, 0, 0, 0.778727, 0, 0, 0, 0.778727, 15.7111, 7.28979, -7.46022)
@@ -333,13 +334,13 @@ transform = Transform3D(0.778727, 0, 0, 0, 0.778727, 0, 0, 0, 0.778727, 15.7111,
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.2518, 7.33196, -4.71516)
 
 [node name="Building_A_Base5" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("16_yttx3")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 20.1439, 7.53681, -1.3076)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 20.1439, 7.52834, -1.3076)
 
 [node name="Building_A_F2" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("17_a7eil")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.2437, 8.72739, -4.71588)
 
 [node name="Building_Top2" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("18_7f7b0")]
-transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.2691, 10.1263, -4.73261)
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 15.2691, 10.103, -4.73261)
 
 [node name="Building_B_Base_AltColor_1" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("11_gf8e5")]
 transform = Transform3D(-4.90641e-08, 0, 1.12246, 0, 1.12246, 0, -1.12246, 0, -4.90641e-08, 18.4799, 7.48062, -5.76974)
@@ -360,7 +361,7 @@ transform = Transform3D(0.618456, 0, 0, 0, 0.618456, 0, 0, 0, 0.618456, 20.1517,
 transform = Transform3D(0.618456, 0, 0, 0, 0.618456, 0, 0, 0, 0.618456, 20.148, 8.74559, -3.38862)
 
 [node name="Building_Top_AltColor_2" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("14_ts5dn")]
-transform = Transform3D(0.618456, 0, 0, 0, 0.618456, 0, 0, 0, 0.618456, 20.1541, 9.99137, -3.3812)
+transform = Transform3D(0.618456, 0, 0, 0, 0.618456, 0, 0, 0, 0.618456, 20.1541, 9.95804, -3.3812)
 
 [node name="Building_A_Base_AltColor_3" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("12_3pllv")]
 transform = Transform3D(0.618456, 0, 0, 0, 0.618456, 0, 0, 0, 0.618456, 15.7563, 7.38983, -2.00501)
@@ -369,7 +370,7 @@ transform = Transform3D(0.618456, 0, 0, 0, 0.618456, 0, 0, 0, 0.618456, 15.7563,
 transform = Transform3D(0.618456, 0, 0, 0, 0.618456, 0, 0, 0, 0.618456, 15.7526, 8.62184, -2.00354)
 
 [node name="Building_Top_AltColor_3" parent="Environment/Lv1_Layout/Breakables" instance=ExtResource("14_ts5dn")]
-transform = Transform3D(0.618456, 0, 0, 0, 0.618456, 0, 0, 0, 0.618456, 15.7586, 9.86762, -1.99611)
+transform = Transform3D(0.618456, 0, 0, 0, 0.618456, 0, 0, 0, 0.618456, 15.7586, 9.83263, -1.99611)
 
 [node name="Squashables" type="Node" parent="Environment/Lv1_Layout"]
 
@@ -521,8 +522,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 16.761
 transform = Transform3D(-0.517415, 0, -0.855735, 0, 1, 0, 0.855735, 0, -0.517415, 38.0877, 6.45971, 24.5499)
 
 [node name="Car4" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("36_nn2tn")]
-transform = Transform3D(0.964304, 0, 0.264799, 0, 1, 0, -0.264799, 0, 0.964304, 7.45295, 8.29491, 26.3022)
-visible = false
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.2032, 7.42515, -2.39965)
 
 [node name="Human1" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("37_xq5ly")]
 transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 30.819, 6.77141, 23.1194)
@@ -615,5 +615,6 @@ transform = Transform3D(-0.0771889, 0, -0.997016, 0, 1, 0, 0.997016, 0, -0.07718
 [node name="Human9" parent="." instance=ExtResource("39_84hfl")]
 transform = Transform3D(0.768797, 0, -0.639493, 0, 1, 0, 0.639493, 0, 0.768797, -10.398, 12.9205, -10.0138)
 
+[connection signal="body_entered" from="Environment/Lv1_Layout/Breakables/Road" to="Environment/Lv1_Layout/Squashables/Car4" method="_on_road_body_entered"]
 [connection signal="body_entered" from="Bounds/TeleporterArea" to="Bounds/TeleporterArea" method="on_body_entered" flags=18]
 [connection signal="body_entered" from="Bounds/TeleporterArea2" to="Bounds/TeleporterArea2" method="on_body_entered" flags=18]

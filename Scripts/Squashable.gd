@@ -8,6 +8,3 @@ func on_body_entered(_body: Node):
 	GameManager.add_casualty_points(CasualtyPoints)
 	
 	self.queue_free()
-
-func on_timer_timeout():
-	pass # Replace with function body.

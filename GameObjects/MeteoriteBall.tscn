@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcymciac3bg8w"]
+[gd_scene load_steps=8 format=3 uid="uid://bcymciac3bg8w"]
 
 [ext_resource type="Script" path="res://Scripts/GameObjects/MeteoriteBall.gd" id="1_ks6e1"]
 [ext_resource type="ArrayMesh" uid="uid://c4kc2je4iuemc" path="res://3DModels/ExportedMeshes/Meteorite.obj" id="2_cldt3"]
+[ext_resource type="PackedScene" uid="uid://dyg1568es10av" path="res://GameObjects/VFX/ImpactExpansionEffect.tscn" id="2_dvpro"]
 [ext_resource type="PackedScene" uid="uid://cmutu7xounrey" path="res://GameObjects/Particles/CPUParticles_MeteoriteTrail.tscn" id="3_7jg2p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykbwr"]
@@ -16,6 +17,7 @@ height = 1.25608
 collision_layer = 2
 angular_damp = 1.0
 script = ExtResource("1_ks6e1")
+ImpactEffectResource = ExtResource("2_dvpro")
 ImpactEffectsCooldown = NodePath("ImpactEffectsCooldown")
 FlamingParticles = NodePath("CPU3D_Puff")
 

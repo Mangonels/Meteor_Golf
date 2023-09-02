@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bn2bpjsehykf7"]
+[gd_scene load_steps=9 format=3 uid="uid://bn2bpjsehykf7"]
 
 [ext_resource type="Script" path="res://Scripts/FracturedModelReplacer.gd" id="1_pypqm"]
-[ext_resource type="PackedScene" uid="uid://dw4wi2bspdyxr" path="res://GameObjects/BreakableProps/Building_A_Base_Fractured_Low.tscn" id="3_rujc2"]
+[ext_resource type="PackedScene" uid="uid://dw4wi2bspdyxr" path="res://GameObjects/BreakableProps/Building_A_Base_Fractured_High.tscn" id="2_jnm7s"]
+[ext_resource type="PackedScene" uid="uid://cvcu4s064eikt" path="res://GameObjects/BreakableProps/Building_A_Base_Fractured_Low.tscn" id="3_2m6nf"]
 [ext_resource type="Material" uid="uid://orvp5q75osgw" path="res://Materials/Material_3.tres" id="3_w57kt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8lvcn"]
@@ -33,14 +34,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_g6fch")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_23c3g"]
-points = PackedVector3Array(-0.817908, 0.110166, -1.07611, -0.904615, -1.00012, -1.00002, -0.817908, 0.230377, -1.07611, 0.816237, 0.110166, -1.07611, -1.0001, -1.00012, -0.904643, -1.09473, 0.110166, -0.82495, -0.904615, 1, -1.00002, 0.904442, -1.00012, -1.00002, 0.816237, 0.230377, -1.07611, -1.0001, -1.00012, 0.904565, -1.09473, 0.230377, -0.82495, -1.09473, 0.110166, 0.809187, -1.0001, 1, -0.904643, 0.904442, 1, -1.00002, 1.09241, 0.110166, -0.82495, 0.999926, -1.00012, -0.904643, -0.904615, -1.00012, 0.999943, -0.822404, 0.110166, 1.08917, -1.09473, 0.230377, 0.809187, -1.0001, 1, 0.904565, 0.999926, 1, -0.904643, 1.09241, 0.230377, -0.82495, 1.09241, 0.110166, 0.809187, 0.999926, -1.00012, 0.904565, 0.904442, -1.00012, 0.999943, -0.822404, 0.230377, 1.08917, 0.811741, 0.110166, 1.08917, -0.904615, 1, 0.999943, 0.999926, 1, 0.904565, 1.09241, 0.230377, 0.809187, 0.904442, 1, 0.999943, 0.811741, 0.230377, 1.08917)
+[sub_resource type="BoxShape3D" id="BoxShape3D_n4l22"]
 
 [node name="Building_A_Base" type="Area3D"]
 collision_mask = 2
 script = ExtResource("1_pypqm")
-FracturedResourceHigh = ExtResource("3_rujc2")
-FracturedResourceLow = ExtResource("3_rujc2")
+HighFracturedResource = ExtResource("2_jnm7s")
+LowFracturedResource = ExtResource("3_2m6nf")
 
 [node name="Building_A_Base2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0150137, 1.0188, 0)
@@ -49,7 +49,7 @@ mesh = SubResource("ArrayMesh_66fg7")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0150137, 1.0188, 0)
-shape = SubResource("ConvexPolygonShape3D_23c3g")
+transform = Transform3D(2.04, 0, 0, 0, 2.04, 0, 0, 0, 2.04, 0, 0.984471, 0)
+shape = SubResource("BoxShape3D_n4l22")
 
 [connection signal="body_entered" from="." to="." method="on_body_entered"]
