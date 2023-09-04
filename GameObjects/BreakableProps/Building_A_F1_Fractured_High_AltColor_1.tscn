@@ -138,10 +138,8 @@ set_material_load_dir = "res://Materials/Material_5.tres"
 
 [node name="Shards" type="Node3D" parent="."]
 
-[node name="RigidBody" type="RigidBody3D" parent="Shards" instance=ExtResource("2_76dqa")]
+[node name="RigidBody" parent="Shards" instance=ExtResource("2_76dqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13179, 0.424837, -0.468143)
-collision_mask = 3
-mass = 0.01
 
 [node name="Building_A_F1_cell_002" type="MeshInstance3D" parent="Shards/RigidBody"]
 mesh = SubResource("ArrayMesh_n4cym")
@@ -151,10 +149,8 @@ surface_material_override/0 = ExtResource("3_mejwe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shards/RigidBody"]
 shape = SubResource("ConvexPolygonShape3D_tlrki")
 
-[node name="@RigidBody3D@69572" type="RigidBody3D" parent="Shards" instance=ExtResource("2_76dqa")]
+[node name="@RigidBody3D@69572" parent="Shards" instance=ExtResource("2_76dqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.177981, 1.01956, 0.642909)
-collision_mask = 3
-mass = 0.01
 
 [node name="Building_A_F1_cell_003" type="MeshInstance3D" parent="Shards/@RigidBody3D@69572"]
 mesh = SubResource("ArrayMesh_yfggg")
@@ -164,10 +160,8 @@ surface_material_override/0 = ExtResource("3_mejwe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shards/@RigidBody3D@69572"]
 shape = SubResource("ConvexPolygonShape3D_5m3fg")
 
-[node name="@RigidBody3D@69573" type="RigidBody3D" parent="Shards" instance=ExtResource("2_76dqa")]
+[node name="@RigidBody3D@69573" parent="Shards" instance=ExtResource("2_76dqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9659, 1.0436, -0.550976)
-collision_mask = 3
-mass = 0.01
 
 [node name="Building_A_F1_cell_004" type="MeshInstance3D" parent="Shards/@RigidBody3D@69573"]
 mesh = SubResource("ArrayMesh_q53q4")
@@ -177,10 +171,8 @@ surface_material_override/0 = ExtResource("3_mejwe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Shards/@RigidBody3D@69573"]
 shape = SubResource("ConvexPolygonShape3D_7q38h")
 
-[node name="@RigidBody3D@69574" type="RigidBody3D" parent="Shards" instance=ExtResource("2_76dqa")]
+[node name="@RigidBody3D@69574" parent="Shards" instance=ExtResource("2_76dqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.378108, 1.62319, 0.0374838)
-collision_mask = 3
-mass = 0.01
 
 [node name="Building_A_F1_cell_005" type="MeshInstance3D" parent="Shards/@RigidBody3D@69574"]
 mesh = SubResource("ArrayMesh_qhmnu")

@@ -1,7 +1,7 @@
 res://GameObjects/FollowCamera.tscn::2e2ba9525ebe4f0618bacfdb9b0688b3::1692894749::res://.godot/exported/133200997/export-92dbebef854f52b3cbeffd36ac26fea7-FollowCamera.scn
 res://GameObjects/Goal.tscn::0bce1deae125a49a50d484ae3906e844::1692882702::res://.godot/exported/133200997/export-993ccd1884d64146c72381ea2f455ee2-Goal.scn
 res://GameObjects/HUD.tscn::85dd5516c1956945f528a045b48fb91a::1692306095::res://.godot/exported/133200997/export-31d0e0503c0e95d1d74e815e8efa18cd-HUD.scn
-res://GameObjects/MeteoriteBall.tscn::47e37013beaea0836a4e6802da71573a::1693680811::res://.godot/exported/133200997/export-c176fd9ac1b947a921bedaae5d109fc8-MeteoriteBall.scn
+res://GameObjects/MeteoriteBall.tscn::47e37013beaea0836a4e6802da71573a::1693689956::res://.godot/exported/133200997/export-c176fd9ac1b947a921bedaae5d109fc8-MeteoriteBall.scn
 res://GameObjects/SwingDirectionPivot.tscn::41eecc18ad56ec42b93c89cf192aebc2::1692306097::res://.godot/exported/133200997/export-b7be81fd32c7eb13f4660128b0b2f7e2-SwingDirectionPivot.scn
 res://Levels/Level1.tscn::59590bad87a0441fccd8ade0936739d2::1693680790::res://.godot/exported/133200997/export-76b8bc62749e8cf48c832874a4449e21-Level1.scn
 res://Levels/TutorialLevel.tscn::3ce8827d212cf5df0c3fff83a3de7345::1692306098::res://.godot/exported/133200997/export-736904c40689d8acb18ad2afb448dda0-TutorialLevel.scn

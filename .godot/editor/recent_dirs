@@ -1,8 +1,9 @@
-C:/Users/dylan/Desktop/LocalRepos/Meteor_Golf/WebHTMLBuild
+C:/Users/dylan/Desktop/LocalRepos/Meteor_Golf/Builds/Windows
+res://
+C:/Users/dylan/Desktop/LocalRepos/Meteor_Golf/Builds/MacOS
 res://Materials
 res://Scripts
 res://GameObjects/BreakableProps
-res://
 res://UIStyles/MainMenu
 res://UIStyles/IngameMenu
 res://GameObjects/GUI
