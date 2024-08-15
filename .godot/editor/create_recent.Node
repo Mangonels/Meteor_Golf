@@ -1,12 +1,14 @@
+DirectionalLight3D
+WorldEnvironment
+Camera3D
+Node
 CollisionShape3D
 AnimationPlayer
 Timer
 MeshInstance3D
-Node
 Area3D
 RigidBody3D
 Node3D
-Camera3D
 Label
 Container
 TextureRect
@@ -25,7 +27,5 @@ LinkButton
 MenuButton
 SpringArm3D
 XRCamera3D
-DirectionalLight3D
-WorldEnvironment
 CSGBox3D
 CharacterBody3D

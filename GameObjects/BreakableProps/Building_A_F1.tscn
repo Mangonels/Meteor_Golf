@@ -34,7 +34,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_k8ger")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_nov7n"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_22iua"]
 
 [node name="Building_A_F1" type="Area3D"]
 collision_mask = 2
@@ -49,7 +49,7 @@ mesh = SubResource("ArrayMesh_ibbnm")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(2.04, 0, 0, 0, 2.04, 0, 0, 0, 2.04, 0, 0.984471, 0)
-shape = SubResource("BoxShape3D_nov7n")
+transform = Transform3D(2.04, 0, 0, 0, 2.04, 0, 0, 0, 2.04, 0, 0.984, 0)
+shape = SubResource("BoxShape3D_22iua")
 
 [connection signal="body_entered" from="." to="." method="on_body_entered"]

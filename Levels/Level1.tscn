@@ -43,8 +43,8 @@
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_q0ifl"]
 sky_top_color = Color(0.243137, 0.4, 0.886275, 1)
 sky_horizon_color = Color(0.0980392, 0.658824, 0.756863, 1)
-ground_bottom_color = Color(0.0976563, 0.65625, 0.753906, 1)
-ground_horizon_color = Color(0.0976563, 0.65625, 0.753906, 1)
+ground_bottom_color = Color(0.0980392, 0.654902, 0.752941, 1)
+ground_horizon_color = Color(0.0980392, 0.654902, 0.752941, 1)
 
 [sub_resource type="Sky" id="Sky_u1dga"]
 sky_material = SubResource("ProceduralSkyMaterial_q0ifl")
@@ -537,10 +537,10 @@ transform = Transform3D(-0.987971, 0, -0.154641, 0, 1, 0, 0.154641, 0, -0.987971
 transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 17.864, 7.38902, -2.84183)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/Lv1_Layout/Squashables"]
-autoplay = "Cars_Animation"
 libraries = {
 "": SubResource("AnimationLibrary_povyy")
 }
+autoplay = "Cars_Animation"
 
 [node name="Bounds" type="Node" parent="."]
 
@@ -616,5 +616,5 @@ transform = Transform3D(-0.0771889, 0, -0.997016, 0, 1, 0, 0.997016, 0, -0.07718
 transform = Transform3D(0.768797, 0, -0.639493, 0, 1, 0, 0.639493, 0, 0.768797, -10.398, 12.9205, -10.0138)
 
 [connection signal="body_entered" from="Environment/Lv1_Layout/Breakables/Road" to="Environment/Lv1_Layout/Squashables/Car4" method="_on_road_body_entered"]
-[connection signal="body_entered" from="Bounds/TeleporterArea" to="Bounds/TeleporterArea" method="on_body_entered" flags=18]
-[connection signal="body_entered" from="Bounds/TeleporterArea2" to="Bounds/TeleporterArea2" method="on_body_entered" flags=18]
+[connection signal="body_entered" from="Bounds/TeleporterArea" to="Bounds/TeleporterArea" method="on_body_entered"]
+[connection signal="body_entered" from="Bounds/TeleporterArea2" to="Bounds/TeleporterArea2" method="on_body_entered"]

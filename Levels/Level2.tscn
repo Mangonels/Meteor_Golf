@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://opvdhjp50qei"]
+
+[ext_resource type="ArrayMesh" uid="uid://2j4vr66ctiw1" path="res://3DModels/ExportedMeshes/Terrain_lv2.obj" id="1_183hh"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ik53m"]
+sky_top_color = Color(0.243137, 0.4, 0.886275, 1)
+sky_horizon_color = Color(0.0980392, 0.658824, 0.756863, 1)
+ground_bottom_color = Color(0.0980392, 0.658824, 0.756863, 1)
+ground_horizon_color = Color(0.0980392, 0.654902, 0.752941, 1)
+
+[sub_resource type="Sky" id="Sky_e6q1t"]
+sky_material = SubResource("ProceduralSkyMaterial_ik53m")
+
+[sub_resource type="Environment" id="Environment_nitlu"]
+background_mode = 2
+sky = SubResource("Sky_e6q1t")
+tonemap_mode = 2
+tonemap_white = 16.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_glbk4"]
+vertex_color_use_as_albedo = true
+
+[node name="Level" type="Node3D"]
+
+[node name="Environment" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_nitlu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
+transform = Transform3D(0.375381, -0.495269, -0.783452, -0.546961, -0.800766, 0.244145, -0.74828, 0.33687, -0.571486, 0, 8.60928, 0)
+light_energy = 0.75
+
+[node name="Lv2_Layout" type="Node" parent="."]
+
+[node name="TerrainLv2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.853141, 0, 0.94232)
+material_override = SubResource("StandardMaterial3D_glbk4")
+mesh = ExtResource("1_183hh")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.92776, -0.0837331, 0.363662, -0.0195263, 0.984059, 0.176765, -0.372666, 0.156894, -0.914606, 5.90514, 4.21471, -10.7112)
