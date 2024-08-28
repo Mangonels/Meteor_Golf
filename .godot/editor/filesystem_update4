@@ -1,4 +1,3 @@
-res://GameObjects/MeteoriteBall.tscn
 res://Materials/Material_3.tres
 res://Materials/Material_4.tres
 res://Materials/Material_2.tres
@@ -8,8 +7,3 @@ res://Materials/Material_5.tres
 res://Scripts/Water.gdshader
 res://Materials/Material_VertexPaint_GLOBAL.tres
 res://Materials/Material_8.tres
-res://Levels/Level1.tscn
-res://Levels/Level2.tscn
-res://GameObjects/GUI/MainMenuTitle.tscn
-res://GameObjects/GUI/IngameMenu.tscn
-res://GameObjects/GUI/MainMenu.tscn

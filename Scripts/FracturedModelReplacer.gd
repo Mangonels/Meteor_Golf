@@ -7,6 +7,7 @@ extends Area3D
 
 @export var DestructionPoints = 1
 
+
 func on_body_entered(_body: Node):
 	var fracturedModel
 	if OS.has_feature("windows"):

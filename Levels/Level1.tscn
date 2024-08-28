@@ -145,6 +145,8 @@ environment = SubResource("Environment_gtv8t")
 transform = Transform3D(-0.0131803, 0.972198, 0.233789, -0.926031, -0.100073, 0.36394, 0.377218, -0.211699, 0.901604, 23.9543, 39.437, -0.610377)
 light_energy = 0.5
 shadow_enabled = true
+shadow_transmittance_bias = 0.5
+shadow_opacity = 0.9
 
 [node name="Lv1_Layout" type="Node" parent="Environment"]
 
@@ -536,6 +538,33 @@ transform = Transform3D(-0.987971, 0, -0.154641, 0, 1, 0, 0.154641, 0, -0.987971
 [node name="Human4" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("37_xq5ly")]
 transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 17.864, 7.38902, -2.84183)
 
+[node name="Human5" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("38_vqmwd")]
+transform = Transform3D(0.156021, 0, -0.987754, 0, 1, 0, 0.987754, 0, 0.156021, 31.3062, 6.72689, 23.2379)
+
+[node name="Human6" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("39_84hfl")]
+transform = Transform3D(0.941623, 0, 0.336668, 0, 1, 0, -0.336668, 0, 0.941623, 33.3441, 5.79628, 1.64165)
+
+[node name="Human7" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("39_84hfl")]
+transform = Transform3D(0.975099, 0, 0.22177, 0, 1, 0, -0.22177, 0, 0.975099, 33.847, 5.55851, 0.72491)
+
+[node name="Human8" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("37_xq5ly")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1378, 5.78428, -3.77068)
+
+[node name="Human9" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("37_xq5ly")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1237, 7.25554, -5.28766)
+
+[node name="Human10" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("38_vqmwd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4802, 7.67117, -5.75015)
+
+[node name="Human11" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("37_xq5ly")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8293, 7.48367, -8.56663)
+
+[node name="Human12" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("38_vqmwd")]
+transform = Transform3D(-0.0771889, 0, -0.997016, 0, 1, 0, 0.997016, 0, -0.0771889, 19.0337, 7.46071, -9.64427)
+
+[node name="Human13" parent="Environment/Lv1_Layout/Squashables" instance=ExtResource("39_84hfl")]
+transform = Transform3D(0.768797, 0, -0.639493, 0, 1, 0, 0.639493, 0, 0.768797, -10.398, 12.9205, -10.0138)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/Lv1_Layout/Squashables"]
 libraries = {
 "": SubResource("AnimationLibrary_povyy")
@@ -587,33 +616,6 @@ transform = Transform3D(1.38231, 0, 0, 0, 1.38231, 0, 0, 0, 1.38231, -27.2884, 9
 [node name="HUD" parent="." instance=ExtResource("4_8xbdw")]
 
 [node name="IngameMenu" parent="." instance=ExtResource("3_vk57i")]
-
-[node name="Human1" parent="." instance=ExtResource("38_vqmwd")]
-transform = Transform3D(0.156021, 0, -0.987754, 0, 1, 0, 0.987754, 0, 0.156021, 31.3062, 6.72689, 23.2379)
-
-[node name="Human2" parent="." instance=ExtResource("39_84hfl")]
-transform = Transform3D(0.941623, 0, 0.336668, 0, 1, 0, -0.336668, 0, 0.941623, 33.3441, 5.79628, 1.64165)
-
-[node name="Human3" parent="." instance=ExtResource("39_84hfl")]
-transform = Transform3D(0.975099, 0, 0.22177, 0, 1, 0, -0.22177, 0, 0.975099, 33.847, 5.55851, 0.72491)
-
-[node name="Human4" parent="." instance=ExtResource("37_xq5ly")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.1378, 5.78428, -3.77068)
-
-[node name="Human5" parent="." instance=ExtResource("37_xq5ly")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1237, 7.25554, -5.28766)
-
-[node name="Human6" parent="." instance=ExtResource("38_vqmwd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4802, 7.67117, -5.75015)
-
-[node name="Human7" parent="." instance=ExtResource("37_xq5ly")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8293, 7.48367, -8.56663)
-
-[node name="Human8" parent="." instance=ExtResource("38_vqmwd")]
-transform = Transform3D(-0.0771889, 0, -0.997016, 0, 1, 0, 0.997016, 0, -0.0771889, 19.0337, 7.46071, -9.64427)
-
-[node name="Human9" parent="." instance=ExtResource("39_84hfl")]
-transform = Transform3D(0.768797, 0, -0.639493, 0, 1, 0, 0.639493, 0, 0.768797, -10.398, 12.9205, -10.0138)
 
 [connection signal="body_entered" from="Environment/Lv1_Layout/Breakables/Road" to="Environment/Lv1_Layout/Squashables/Car4" method="_on_road_body_entered"]
 [connection signal="body_entered" from="Bounds/TeleporterArea" to="Bounds/TeleporterArea" method="on_body_entered"]

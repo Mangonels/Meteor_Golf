@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdllof7dbybru"
 path.s3tc="res://.godot/imported/ParticleSprite_Ray.png-07ee646fd2dd3e9088827cb289bac2e4.s3tc.ctex"
+path.etc2="res://.godot/imported/ParticleSprite_Ray.png-07ee646fd2dd3e9088827cb289bac2e4.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/ParticleSprite_Ray.png"
-dest_files=["res://.godot/imported/ParticleSprite_Ray.png-07ee646fd2dd3e9088827cb289bac2e4.s3tc.ctex"]
+dest_files=["res://.godot/imported/ParticleSprite_Ray.png-07ee646fd2dd3e9088827cb289bac2e4.s3tc.ctex", "res://.godot/imported/ParticleSprite_Ray.png-07ee646fd2dd3e9088827cb289bac2e4.etc2.ctex"]
 
 [params]
 

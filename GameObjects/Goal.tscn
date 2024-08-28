@@ -4,13 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://cb2r1p3ojpf4k" path="res://GameObjects/Particles/CPUParticles_LevelFinished.tscn" id="2_hydtv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_54n53"]
+size = Vector3(1, 0.2, 1)
 
 [node name="Goal" type="Area3D"]
 collision_mask = 2
 script = ExtResource("1_210l2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 0.5, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 shape = SubResource("BoxShape3D_54n53")
 
 [node name="LevelFinishedEffect" parent="." instance=ExtResource("2_hydtv")]

@@ -35,3 +35,9 @@ android.debug.single.x86_64 = "android/libgodot-jolt_android-x64_editor.so"
 
 android.release.single.x86_32 = "android/libgodot-jolt_android-x86.so"
 android.debug.single.x86_32 = "android/libgodot-jolt_android-x86_editor.so"
+
+web.release.threads.single = "web/godot-jolt_web_threads-wasm.wasm"
+web.debug.threads.single = "web/godot-jolt_web_threads-wasm_editor.wasm"
+
+web.release.single = "web/godot-jolt_web-wasm.wasm"
+web.debug.single = "web/godot-jolt_web-wasm_editor.wasm"
