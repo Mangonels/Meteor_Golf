@@ -3,17 +3,17 @@ extends Control
 @onready var CameraScript: Node3D = get_tree().get_root().get_node("Level/OrbitalFollowCamera")
 
 func _ready():
-	Input.mouse_mode = 2
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	hide()
 
 func _process(_delta):
 	if Input.is_action_just_pressed("toggle_menu"):
 		if is_visible():
-			Input.mouse_mode = 2
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 			CameraScript.OrbitingEnabled = true
 			hide()
 		else:
-			Input.mouse_mode = 0
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			CameraScript.OrbitingEnabled = false
 			show()
 

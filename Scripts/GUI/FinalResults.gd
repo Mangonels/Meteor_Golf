@@ -6,7 +6,7 @@ extends Control
 func _ready():
 	hide()
 
-func _process(delta):
+func _process(_delta):
 	if is_visible() and ( Input.is_action_just_pressed("submit") or Input.is_action_just_pressed("swing") ):
 		hide()
 		GameManager.change_to_next_level()
