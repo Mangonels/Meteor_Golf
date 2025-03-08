@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjbpg3ajwb8i6"]
 
-[ext_resource type="Script" path="res://Scripts/Squashable.gd" id="1_5j706"]
+[ext_resource type="Script" uid="uid://m84rum520qwa" path="res://Scripts/Squashable.gd" id="1_5j706"]
 [ext_resource type="Material" uid="uid://b1ccb0kkimcrq" path="res://Materials/Material_VertexPaint_GLOBAL.tres" id="2_j5eqo"]
 [ext_resource type="ArrayMesh" uid="uid://xjgpqf6cbnyd" path="res://3DModels/ExportedMeshes/SquashableProps/Car2.obj" id="2_upxba"]
 

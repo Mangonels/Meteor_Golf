@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bu2kie7r0xa63"]
 
-[ext_resource type="Script" path="res://Scripts/GUI/DrivePowerDisplay.gd" id="1_w67ay"]
+[ext_resource type="Script" uid="uid://pt0u12rfb3mr" path="res://Scripts/GUI/DrivePowerDisplay.gd" id="1_w67ay"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cxfcu"]
 font_size = 36

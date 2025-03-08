@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bvf7qqu3pn52x"]
 
-[ext_resource type="Script" path="res://Scripts/GameObjects/OrbitalFollowCamera.gd" id="1_e72ab"]
+[ext_resource type="Script" uid="uid://b2kea16koojg8" path="res://Scripts/GameObjects/OrbitalFollowCamera.gd" id="1_e72ab"]
 
 [node name="OrbitalFollowCamera" type="Node3D" node_paths=PackedStringArray("SpringArm", "Camera")]
 script = ExtResource("1_e72ab")

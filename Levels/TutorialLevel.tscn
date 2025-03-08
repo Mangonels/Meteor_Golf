@@ -1,14 +1,14 @@
 [gd_scene load_steps=17 format=3 uid="uid://78h18nfrn17g"]
 
 [ext_resource type="PackedScene" uid="uid://bcymciac3bg8w" path="res://GameObjects/MeteoriteBall.tscn" id="1_iy6p6"]
-[ext_resource type="ArrayMesh" uid="uid://nl7x6fkcp86m" path="res://BlenderMeshes/Tutorial_FloatingIsland 2.obj" id="1_jpcow"]
+[ext_resource type="ArrayMesh" uid="uid://nl7x6fkcp86m" path="res://3DModels/ExportedMeshes/Tutorial_FloatingIsland 2.obj" id="1_jpcow"]
 [ext_resource type="PackedScene" uid="uid://bo7y8wj1jiu8g" path="res://GameObjects/SwingDirectionPivot.tscn" id="2_1o5nh"]
 [ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="2_i0uub"]
 [ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://GameObjects/GUI/IngameMenu.tscn" id="3_esetd"]
 [ext_resource type="PackedScene" uid="uid://n34k1oie6pb4" path="res://GameObjects/Goal.tscn" id="3_f18f7"]
 [ext_resource type="PackedScene" uid="uid://b7g23gyss1868" path="res://GameObjects/GUI/FinalResults.tscn" id="5_67xkk"]
 [ext_resource type="PackedScene" uid="uid://bu2kie7r0xa63" path="res://GameObjects/HUD.tscn" id="5_76ukj"]
-[ext_resource type="ArrayMesh" uid="uid://0kggruhlti1j" path="res://BlenderMeshes/Tutorial_FloatingIsland.obj" id="8_vfuw0"]
+[ext_resource type="ArrayMesh" uid="uid://0kggruhlti1j" path="res://3DModels/ExportedMeshes/Tutorial_FloatingIsland.obj" id="8_vfuw0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3vhy7"]
 sky_top_color = Color(0.0745098, 0.415686, 0.560784, 1)
@@ -48,6 +48,7 @@ environment = SubResource("Environment_0br1e")
 transform = Transform3D(0.52387, 0.581222, 0.622689, -0.811586, 0.118625, 0.572063, 0.258629, -0.805052, 0.533856, 0, 27.7108, 73.7212)
 light_energy = 0.5
 shadow_enabled = true
+directional_shadow_blend_splits = true
 
 [node name="Layout" type="Node" parent="Environment"]
 

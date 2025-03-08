@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvns1w54apojy"]
 
-[ext_resource type="Script" path="res://Scripts/GUI/TeleporterArea.gd" id="1_huqby"]
+[ext_resource type="Script" uid="uid://bvn1pfmc4c3qy" path="res://Scripts/GUI/TeleporterArea.gd" id="1_huqby"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5djom"]
 

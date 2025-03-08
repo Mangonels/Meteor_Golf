@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bo7y8wj1jiu8g" path="res://GameObjects/SwingDirectionPivot.tscn" id="2_43rjw"]
 [ext_resource type="ArrayMesh" uid="uid://dqjy3yw70rfq2" path="res://3DModels/ExportedMeshes/FlagPole.obj" id="2_q82rq"]
 [ext_resource type="PackedScene" uid="uid://bvf7qqu3pn52x" path="res://GameObjects/FollowCamera.tscn" id="2_ria2r"]
-[ext_resource type="Script" path="res://Scripts/GUI/TeleporterArea.gd" id="3_6x123"]
+[ext_resource type="Script" uid="uid://bvn1pfmc4c3qy" path="res://Scripts/GUI/TeleporterArea.gd" id="3_6x123"]
 [ext_resource type="Material" uid="uid://lqcf12mdtwfv" path="res://Materials/Material_7.tres" id="3_pmr6g"]
 [ext_resource type="PackedScene" uid="uid://dlsjnsdu66ela" path="res://GameObjects/GUI/IngameMenu.tscn" id="3_vk57i"]
 [ext_resource type="ArrayMesh" uid="uid://c7fspc1br1t2q" path="res://3DModels/ExportedMeshes/Cloud1.obj" id="4_4tq3e"]
@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://civu6e2x3tyoa" path="res://GameObjects/BreakableProps/Building_A_F1_AltColor_1.tscn" id="17_a7eil"]
 [ext_resource type="PackedScene" uid="uid://c75ix12rlxpmn" path="res://GameObjects/BreakableProps/Building_Top_AltColor_1.tscn" id="18_7f7b0"]
 [ext_resource type="PackedScene" uid="uid://dmwkqkpkg35hg" path="res://GameObjects/BreakableProps/Building_A_F1_AltColor_2.tscn" id="20_32id3"]
-[ext_resource type="Shader" path="res://Scripts/Water.gdshader" id="23_6vqys"]
+[ext_resource type="Shader" uid="uid://ca1ri7k72xlyg" path="res://Scripts/Water.gdshader" id="23_6vqys"]
 [ext_resource type="Material" uid="uid://orvp5q75osgw" path="res://Materials/Material_3.tres" id="26_b5q1q"]
 [ext_resource type="ArrayMesh" uid="uid://yf2m6h2w4fqy" path="res://3DModels/ExportedMeshes/Rock1.obj" id="26_ula6q"]
 [ext_resource type="ArrayMesh" uid="uid://kn3kqbjfh23q" path="res://3DModels/ExportedMeshes/Rock2.obj" id="27_g3iru"]
@@ -129,7 +129,7 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_povyy"]
 _data = {
-"Cars_Animation": SubResource("Animation_634vh")
+&"Cars_Animation": SubResource("Animation_634vh")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5djom"]
@@ -147,6 +147,7 @@ light_energy = 0.5
 shadow_enabled = true
 shadow_transmittance_bias = 0.5
 shadow_opacity = 0.9
+directional_shadow_blend_splits = true
 
 [node name="Lv1_Layout" type="Node" parent="Environment"]
 
@@ -567,7 +568,7 @@ transform = Transform3D(0.768797, 0, -0.639493, 0, 1, 0, 0.639493, 0, 0.768797, 
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Environment/Lv1_Layout/Squashables"]
 libraries = {
-"": SubResource("AnimationLibrary_povyy")
+&"": SubResource("AnimationLibrary_povyy")
 }
 autoplay = "Cars_Animation"
 

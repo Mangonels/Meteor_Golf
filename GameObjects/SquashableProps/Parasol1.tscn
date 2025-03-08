@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://brb3cxiqcdv6r"]
 
-[ext_resource type="Script" path="res://Scripts/Squashable.gd" id="1_5b101"]
+[ext_resource type="Script" uid="uid://m84rum520qwa" path="res://Scripts/Squashable.gd" id="1_5b101"]
 [ext_resource type="Material" uid="uid://b1ccb0kkimcrq" path="res://Materials/Material_VertexPaint_GLOBAL.tres" id="2_6okts"]
 [ext_resource type="ArrayMesh" uid="uid://cmbtqhibs7kar" path="res://3DModels/ExportedMeshes/SquashableProps/Parasol1.obj" id="3_n4keo"]
 

@@ -17,8 +17,4 @@ res://GameObjects/SquashableProps/Human1.tscn
 res://GameObjects/SquashableProps/Car1.tscn
 res://GameObjects/SquashableProps/Car3.tscn
 res://GameObjects/Goal.tscn
-res://GameObjects/GUI/FinalResults.tscn
-res://Scripts/GUI/MainMenu.gd
-res://Scripts/GUI/IngameMenu.gd
-res://Scripts/GUI/FinalResults.gd
-res://Scripts/GameObjects/Goal.gd
+res://Levels/TutorialLevel.tscn

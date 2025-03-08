@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bo7y8wj1jiu8g"]
 
-[ext_resource type="Script" path="res://Scripts/GameObjects/SwingDirectionPivot.gd" id="1_75pko"]
-[ext_resource type="Script" path="res://Scripts/GameObjects/SwingDirectionPivot_HeightRegulator.gd" id="2_jjhni"]
+[ext_resource type="Script" uid="uid://mkt84tfe4y25" path="res://Scripts/GameObjects/SwingDirectionPivot.gd" id="1_75pko"]
+[ext_resource type="Script" uid="uid://c16kyj04j7ayj" path="res://Scripts/GameObjects/SwingDirectionPivot_HeightRegulator.gd" id="2_jjhni"]
 [ext_resource type="PackedScene" uid="uid://bdjrpy8m2y1xp" path="res://GameObjects/VFX/Orienter.tscn" id="3_1pcty"]
 
 [node name="SwingDirectionPivot" type="Node3D"]

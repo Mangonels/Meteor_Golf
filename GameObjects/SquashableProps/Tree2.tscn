@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmyw0ugpewiw4"]
 
-[ext_resource type="Script" path="res://Scripts/Squashable.gd" id="1_1pfq0"]
+[ext_resource type="Script" uid="uid://m84rum520qwa" path="res://Scripts/Squashable.gd" id="1_1pfq0"]
 [ext_resource type="Material" uid="uid://b1ccb0kkimcrq" path="res://Materials/Material_VertexPaint_GLOBAL.tres" id="2_pu71p"]
 [ext_resource type="ArrayMesh" uid="uid://b6timmh2lk3ka" path="res://3DModels/ExportedMeshes/SquashableProps/Tree2.obj" id="3_8kwbh"]
 

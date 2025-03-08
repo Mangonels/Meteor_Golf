@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bxlc2nuhg56ky"]
 
-[ext_resource type="Script" path="res://Scripts/Squashable.gd" id="1_mnemw"]
+[ext_resource type="Script" uid="uid://m84rum520qwa" path="res://Scripts/Squashable.gd" id="1_mnemw"]
 [ext_resource type="Material" uid="uid://bv856fdxe0psl" path="res://Materials/Material_8.tres" id="2_brbwk"]
 [ext_resource type="ArrayMesh" uid="uid://bcyy41gfytg52" path="res://3DModels/ExportedMeshes/SquashableProps/Human1.obj" id="2_ivl8w"]
 
@@ -24,8 +24,8 @@ length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wyxk6"]
 _data = {
-"Human_Animation": SubResource("Animation_mssc8"),
-"RESET": SubResource("Animation_cejsr")
+&"Human_Animation": SubResource("Animation_mssc8"),
+&"RESET": SubResource("Animation_cejsr")
 }
 
 [node name="Human1" type="Area3D"]
@@ -44,7 +44,7 @@ shape = SubResource("BoxShape3D_vroh8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_wyxk6")
+&"": SubResource("AnimationLibrary_wyxk6")
 }
 autoplay = "Human_Animation"
 

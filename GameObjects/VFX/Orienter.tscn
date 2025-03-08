@@ -75,7 +75,7 @@ tracks/8/keys = PackedFloat32Array(0, 1, 1, 1, 1, 0.5, 1, 0, 0, 0)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_51m1o"]
 _data = {
-"Orienter_Animation": SubResource("Animation_gboi6")
+&"Orienter_Animation": SubResource("Animation_gboi6")
 }
 
 [sub_resource type="GDScript" id="GDScript_hwv26"]

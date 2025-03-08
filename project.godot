@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Meteor Golf"
 run/main_scene="res://Levels/MainMenuScene.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -89,7 +89,7 @@ submit={
 
 [physics]
 
-3d/physics_engine="JoltPhysics3D"
+3d/physics_engine="Jolt Physics"
 
 [rendering]
 

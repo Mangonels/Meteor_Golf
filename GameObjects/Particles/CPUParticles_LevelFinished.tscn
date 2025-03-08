@@ -20,13 +20,12 @@ lightmap_size_hint = Vector2i(7, 7)
 material = SubResource("StandardMaterial3D_t7685")
 
 [sub_resource type="Curve" id="Curve_wawxh"]
-max_value = 2.0
+_limits = [0.0, 2.0, 0.0, 1.0]
 _data = [Vector2(0, 0), 0.0, 3.23008, 0, 0, Vector2(0.243948, 0.48421), 1.37033, 1.37033, 0, 0, Vector2(0.378026, 0.610526), 0.827215, 0.827215, 0, 0, Vector2(0.530726, 0.736842), -0.305547, -0.305547, 0, 0, Vector2(1, 0), -0.262912, 0.0, 0, 0]
 point_count = 5
 
 [sub_resource type="Curve" id="Curve_aucav"]
-min_value = 0.5
-max_value = 1.25
+_limits = [0.5, 1.25, 0.0, 1.0]
 _data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.0837989, 1.02105), 0.0, 0.0, 0, 0, Vector2(0.156425, 0.642105), 0.0, 0.0, 0, 0, Vector2(0.204842, 1.00526), 0.0, 0.0, 0, 0, Vector2(0.24581, 0.705263), 0.0, 0.0, 0, 0, Vector2(0.307263, 0.973684), 0.0, 0.0, 0, 0, Vector2(0.366853, 0.5), 0.0, 0.0, 0, 0, Vector2(0.420857, 1.02105), 0.0, 0.0, 0, 0, Vector2(0.465549, 0.673684), 0.0, 0.0, 0, 0, Vector2(0.510242, 0.957895), 0.0, 0.0, 0, 0, Vector2(0.581006, 0.689474), 0.0, 0.0, 0, 0, Vector2(0.646182, 1.19474), 0.0, 0.0, 0, 0, Vector2(0.709497, 0.642105), 0.0, 0.0, 0, 0, Vector2(0.763501, 1.1), 0.0, 0.0, 0, 0, Vector2(0.808194, 0.705263), 0.0, 0.0, 0, 0, Vector2(0.877095, 1.19474), 0.0, 0.0, 0, 0, Vector2(0.94041, 0.657894), 0.0, 0.0, 0, 0, Vector2(1, 0.95), 0.0, 0.0, 0, 0]
 point_count = 18
 
@@ -45,8 +44,7 @@ material = SubResource("StandardMaterial3D_lgp8x")
 size = Vector2(0.5, 20)
 
 [sub_resource type="Curve" id="Curve_mvsek"]
-min_value = 0.1
-max_value = 100.0
+_limits = [0.1, 100.0, 0.0, 1.0]
 _data = [Vector2(0, 0.1), 0.0, 0.0, 0, 0, Vector2(1, 20.08), 0.0, 0.0, 0, 0]
 point_count = 2
 

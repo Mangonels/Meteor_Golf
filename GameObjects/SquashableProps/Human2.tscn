@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://bpdroeh7i4e8f"]
 
-[ext_resource type="Script" path="res://Scripts/Squashable.gd" id="1_phvvi"]
+[ext_resource type="Script" uid="uid://m84rum520qwa" path="res://Scripts/Squashable.gd" id="1_phvvi"]
 [ext_resource type="ArrayMesh" uid="uid://csrktkbs0eu5o" path="res://3DModels/ExportedMeshes/SquashableProps/Human2.obj" id="2_q3n8u"]
 [ext_resource type="Material" uid="uid://bv856fdxe0psl" path="res://Materials/Material_8.tres" id="2_y45xc"]
-[ext_resource type="Script" path="res://Scripts/HumanAnimationTimerScript.gd" id="4_q4g3s"]
+[ext_resource type="Script" uid="uid://cropx5t36jcqm" path="res://Scripts/HumanAnimationTimerScript.gd" id="4_q4g3s"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vroh8"]
 size = Vector3(0.885353, 1, 1)
@@ -22,7 +22,7 @@ tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.246, 0, 0.2, 1, 0, 0.346, 0, 0.4, 
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wyxk6"]
 _data = {
-"Human_Animation": SubResource("Animation_mssc8")
+&"Human_Animation": SubResource("Animation_mssc8")
 }
 
 [node name="Human2" type="Area3D"]

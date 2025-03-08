@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://n34k1oie6pb4"]
 
-[ext_resource type="Script" path="res://Scripts/GameObjects/Goal.gd" id="1_210l2"]
+[ext_resource type="Script" uid="uid://jonwtgvtgec3" path="res://Scripts/GameObjects/Goal.gd" id="1_210l2"]
 [ext_resource type="PackedScene" uid="uid://cb2r1p3ojpf4k" path="res://GameObjects/Particles/CPUParticles_LevelFinished.tscn" id="2_hydtv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_54n53"]
